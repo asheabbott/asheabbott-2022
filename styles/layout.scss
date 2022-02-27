@@ -1,0 +1,31 @@
+@use "sass:math";
+@import "./variables";
+
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-family: $font-family;
+}
+
+.flex {
+	display: flex;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.contain {
+	@include container;
+}
+
+.contain-wide {
+	@include containerWide;
+}
+
+.contain-full {
+	@include containerFull;
+}
+
+section {
+	margin-bottom: #{$spacing-large * 2};
+}

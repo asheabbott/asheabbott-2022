@@ -1,0 +1,25 @@
+@mixin container {
+	width: calc(100% - #{$spacing-medium * 2});
+	max-width: 700px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: $spacing-large $spacing-medium 0 $spacing-medium;
+}
+
+@mixin containerWide {
+	width: calc(100% - #{$spacing-medium * 2});
+	max-width: 1200px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: $spacing-large $spacing-medium 0 $spacing-medium;
+}
+
+@mixin containerFull {
+	width: calc(100% - #{$spacing-medium * 2});
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: $spacing-large $spacing-medium 0 $spacing-medium;
+}

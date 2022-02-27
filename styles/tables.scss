@@ -1,0 +1,335 @@
+@use "sass:math";
+@import "./variables";
+
+.table-action-links-wrap {
+	.table-action-links-row {
+		@media #{$break-md-up} {
+			display: flex;
+		}
+
+		.table-action-links {
+			margin: 0 0 math.div($spacing-standard, 2) 0;
+
+			@media #{$break-md-up} {
+				margin-right: #{$spacing-standard};
+			}
+
+			&.right {
+				@media #{$break-md-up} {
+					margin-right: 0;
+					margin-left: auto;
+				}
+			}
+
+			.label {
+				display: inline-block;
+				margin-right: math.div($spacing-standard, 2);
+				font-weight: $font-weight-bold;
+				color: $slate;
+			}
+		}
+
+		&.bottom {
+			.table-action-links {
+				margin-top: math.div($spacing-standard, 2);
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	margin: 0;
+	border: $border-size solid $slate;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: math.div($spacing-medium, 2) math.div($spacing-large, 2);
+
+		&.expanded-panel {
+			padding: 0;
+			background-color: $white;
+		}
+	}
+
+	td {
+		display: block;
+		text-align: right;
+
+		@media #{$break-md-up} {
+			display: table-cell;
+			text-align: left;
+		}
+
+		&::before {
+			content: attr(data-label);
+			font-weight: $font-weight-bold;
+			font-size: $font-size-supporting;
+			text-transform: uppercase;
+			text-align: left;
+			line-height: $line-height-condensed;
+			float: left;
+
+			@media #{$break-md-up} {
+				content: "";
+			}
+		}
+
+		&.clickable-row {
+			cursor: pointer;
+		}
+	}
+
+	thead {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		margin: -1px;
+		background-color: $slate;
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+
+		@media #{$break-md-up} {
+			width: auto;
+			height: auto;
+			position: static;
+			margin: 0;
+			clip: none;
+			overflow: visible;
+		}
+
+		th {
+			font-weight: $font-weight-bold;
+			font-size: $font-size-supporting;
+			color: $white;
+			text-transform: uppercase;
+			text-align: left;
+			line-height: $line-height-condensed;
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				form,
+				.form {
+					label {
+						display: flex;
+						justify-content: center;
+						margin-bottom: 0;
+					}
+				}
+
+				.collapse-trigger {
+					display: flex;
+					align-items: center;
+					padding: 22px math.div($spacing-large, 2);
+					background-color: $grey;
+					border: 0;
+					font-weight: $font-weight-semi-bold;
+					font-size: $font-size-body;
+					color: $slate;
+					line-height: $line-height-condensed;
+
+					&:focus-visible {
+						background-color: $blue;
+						border: 0;
+					}
+				}
+
+				.item-name {
+					display: flex;
+					align-items: center;
+				}
+
+				.child-dash {
+					width: 22px;
+					height: $border-size;
+					margin: 0 math.div($spacing-standard, 2) 0 0;
+					background-color: $slate;
+				}
+			}
+
+			&:nth-child(even) {
+				background-color: $grey-lt;
+			}
+
+			&.loader {
+				td {
+					text-align: center;
+
+					span {
+						height: 15px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	&.break-xl {
+		td {
+			@media #{$break-md-up} {
+				display: flex;
+				align-items: center;
+			}
+
+			@media #{$break-xl-up} {
+				display: table-cell;
+				text-align: left;
+			}
+
+			&::before {
+				@media #{$break-md-up} {
+					content: attr(data-label);
+				}
+
+				@media #{$break-xl-up} {
+					content: "";
+				}
+			}
+
+			& > div,
+			& > label {
+				width: 80%;
+				margin-left: auto;
+
+				@media #{$break-xl-up} {
+					width: 100%;
+				}
+			}
+		}
+
+		.table-toggle-content {
+			td {
+				display: block;
+
+				@media #{$break-xl-up} {
+					display: table-cell;
+				}
+
+				& > div {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+
+		thead {
+			@media #{$break-md-up} {
+				width: 1px;
+				height: 1px;
+				position: absolute;
+				margin: -1px;
+				clip: rect(0 0 0 0);
+				overflow: hidden;
+			}
+
+			@media #{$break-xl-up} {
+				width: auto;
+				height: auto;
+				position: static;
+				margin: 0;
+				clip: none;
+				overflow: visible;
+			}
+		}
+	}
+
+	&.table-toggle {
+		tbody {
+			tr {
+				&:nth-child(even) {
+					background-color: $white;
+				}
+
+				&.even {
+					background-color: $grey-lt;
+				}
+
+				&.table-toggle-content {
+					td {
+						padding-top: 8px;
+
+						.rules-panel {
+							.rules-panel-inner {
+								padding-top: $spacing-standard;
+							}
+						}
+					}
+				}
+
+				td {
+					.collapse-trigger {
+						padding: 0;
+						background-color: transparent;
+
+						&.h4 {
+							font-size: $font-size-h4;
+						}
+
+						&:focus-visible {
+							border: $border-size solid $slate;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.groups {
+		tbody {
+			tr {
+				background-color: $grey;
+
+				& > td {
+					table {
+						border: 0;
+
+						tr {
+							background-color: $white;
+
+							&:nth-child(even) {
+								background-color: $grey-lt;
+							}
+						}
+					}
+				}
+
+				&.subgroup {
+					background-color: $grey !important;
+					border-top: $border-size solid $slate;
+
+					.subgroup-trigger {
+						padding: 0;
+	
+						.child-dash {
+							width: 22px;
+							height: $border-size;
+							margin: 0 math.div($spacing-standard, 2) 0 0;
+							background-color: $slate;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.table-scroll-wrap {
+	max-height: 600px;
+	overflow-y: auto;
+	border: $border-size solid $slate;
+
+	table {
+		border: 0;
+
+		thead {
+			position: sticky;
+			top: 0;
+		}
+	}
+}

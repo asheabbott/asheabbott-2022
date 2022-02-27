@@ -1,0 +1,50 @@
+@use "sass:math";
+@import "./variables";
+
+.grid-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	@media #{$break-md-up} {
+		flex-wrap: nowrap;
+		margin: -#{$spacing-standard} (math.div($spacing-standard, 2) * -1);
+	}
+
+	div[class*="grid-col-"] {
+		width: 100%;
+		margin-bottom: $spacing-standard;
+
+		@media #{$break-md-up} {
+			width: calc(100% - #{$spacing-standard});
+			margin: $spacing-standard math.div($spacing-standard, 2);
+
+			&.grid-col-full {
+				width: calc(100% - #{$spacing-standard});
+			}
+
+			&.grid-col-half {
+				width: calc(50% - #{$spacing-standard});
+			}
+
+			&.grid-col-third {
+				width: calc(33.33% - #{$spacing-standard});
+			}
+
+			&.grid-col-two-thirds {
+				width: calc(66.66% - #{$spacing-standard});
+			}
+
+			&.grid-col-quarter {
+				width: calc(25% - #{$spacing-standard});
+			}
+
+			&.grid-col-three-quarters {
+				width: calc(75% - #{$spacing-standard});
+			}
+
+			&.no-label {
+				padding-top: 34px;
+			}
+		}
+	}
+}
