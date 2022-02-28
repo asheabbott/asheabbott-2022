@@ -19,6 +19,15 @@ const Header = ({ home = false }) => {
 				{/* TO DO */}
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			{/* <div className="svg-sprite">
+			<?php get_template_part('images/sprite.svg'); ?>
+		</div> */}
+
+			<a className="skip-to-content" href="#main">
+				Skip to main content
+			</a>
+
+			<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
 			<header className={styles.siteHeader}>
 				<div className={styles.headerInner}>
 					<div className="flex">

@@ -1,25 +1,17 @@
+@import "../styles/variables.scss";
+
 @mixin container {
-	width: calc(100% - #{$spacing-medium * 2});
-	max-width: 700px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: $spacing-large $spacing-medium 0 $spacing-medium;
-}
+  width: 100%;
+  max-width: $content-max;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
 
-@mixin containerWide {
-	width: calc(100% - #{$spacing-medium * 2});
-	max-width: 1200px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: $spacing-large $spacing-medium 0 $spacing-medium;
-}
+  @media #{$break-sm-square-up} {
+    padding: 0 50px;
+  }
 
-@mixin containerFull {
-	width: calc(100% - #{$spacing-medium * 2});
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: $spacing-large $spacing-medium 0 $spacing-medium;
+  @media #{$break-md-up} {
+    padding: 0 65px;
+  }
 }

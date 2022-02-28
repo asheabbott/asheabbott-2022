@@ -1,0 +1,41 @@
+@import "../../../styles/variables.scss";
+
+.hero {
+	.heroText {
+		padding: 250px 0 92px 0;
+		background-color: $black;
+
+		@media #{$break-sm-up} {
+			padding-bottom: 192px;
+		}
+
+		.heroTextInner {
+			max-width: 900px;
+
+			h1 {
+				margin: 0;
+				font-weight: $font-weight-medium;
+				font-size: $font-size-h2-mobile;
+				color: $white;
+				text-transform: none;
+				line-height: $line-height-heading;
+
+				@media #{$break-sm-up} {
+					font-size: $font-size-h2;
+				}
+			}
+		}
+	}
+
+	.heroReel {
+		margin-top: -52px;
+
+		@media #{$break-sm-up} {
+			margin-top: -142px;
+		}
+
+		.video {
+			background-color: #f52d83;
+		}
+	}
+}

@@ -156,7 +156,15 @@
 }
 
 .homeLogoBuffer {
-	display: none;
+	width: 100%;
+	height: 0;
+	display: block;
+	margin-bottom: -1px;
+	padding-bottom: 55%;
+
+	@media #{$break-sm-up} {
+		padding-bottom: 6.6%;
+	}
 }
 
 @media #{$break-sm-down} {

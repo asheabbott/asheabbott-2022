@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.home {
+	background-image: url(/images/logo-home-mobile.svg);
+	background-size: 100%;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	@media #{$break-sm-up} {
+		background-image: url(/images/logo-home.svg);
+	}
+}
