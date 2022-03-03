@@ -2,14 +2,18 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useMediaQuery from "../../../utilities/useMediaQuery";
 
 import styles from "./Header.module.scss";
 
-const Header = ({ home = false }) => {
+const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+
+	useEffect(() => {
+		document.querySelector("body").classList.add("loaded");
+	}, []);
 
 	return (
 		<>
@@ -19,14 +23,9 @@ const Header = ({ home = false }) => {
 				{/* TO DO */}
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			{/* <div className="svg-sprite">
-			<?php get_template_part('images/sprite.svg'); ?>
-		</div> */}
-
 			<a className="skip-to-content" href="#main">
 				Skip to main content
 			</a>
-
 			<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
 			<header className={styles.siteHeader}>
 				<div className={styles.headerInner}>
@@ -49,7 +48,7 @@ const Header = ({ home = false }) => {
 								</Link>
 							</div>
 						</div>
-						{/* <div className={styles.menuBtn}>
+						<div className={styles.menuBtn}>
 							<button
 								className={styles.hamburger}
 								aria-label="Open or close main menu"
@@ -59,41 +58,10 @@ const Header = ({ home = false }) => {
 								<span></span>
 								<span></span>
 							</button>
-						</div> */}
+						</div>
 					</div>
 				</div>
 			</header>
-			{/* <header className={`${styles.header} ${home ? styles.inHero : ""}`}>
-				<div className={styles.headerContent}>
-					<div className={styles.headerContentInner}>
-						<div className={styles.logo}>
-							<Link href="/">
-								<a>
-									<Image
-										src={home ? "/images/logo-dark.svg" : "/images/logo.svg"}
-										width={136}
-										height={62}
-										alt="tuzag logo"
-									/>
-								</a>
-							</Link>
-						</div>
-						<div className={styles.hamburger}>
-							<div className={styles.hamburgerInner}>
-								<button
-									aria-label="Open menu"
-									onClick={() => {
-										setMenuOpen(true);
-									}}
-								>
-									<FontAwesomeIcon icon="bars" />
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				{menuOpen && <Menu setMenuOpen={setMenuOpen} />}
-			</header> */}
 		</>
 	);
 };

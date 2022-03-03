@@ -17,8 +17,10 @@ const Home = () => {
 			</Head>
 
 			<Header />
-			<Hero />
-			<Intro />
+			<main>
+				<Hero />
+				<Intro />
+			</main>
 			{/* <Footer /> */}
 		</div>
 	);
