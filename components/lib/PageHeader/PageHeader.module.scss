@@ -1,0 +1,9 @@
+@import "../../../styles/variables.scss";
+
+.pageHeader {
+	background-color: $black;
+
+	h1 {
+		color: $white;
+	}
+}

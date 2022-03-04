@@ -1,15 +1,14 @@
 import Head from "next/head";
 
 import Header from "../../lib/Header/Header";
-import Hero from "./Hero/Hero";
-import Intro from "./Intro/Intro";
+import PageHeader from "../../lib/PageHeader/PageHeader";
 import Footer from "../../lib/Footer/Footer";
 
-import styles from "./Home.module.scss";
+import styles from "./Work.module.scss";
 
-const Home = () => {
+const Work = () => {
 	return (
-		<div className={styles.home}>
+		<div className={styles.work}>
 			<Head>
 				{/* TO DO */}
 				<title>Ashe Abbott DiBlasi</title>
@@ -19,12 +18,11 @@ const Home = () => {
 
 			<Header />
 			<main>
-				<Hero />
-				<Intro />
+				<PageHeader title="Work" />
 			</main>
 			<Footer />
 		</div>
 	);
 };
 
-export default Home;
+export default Work;

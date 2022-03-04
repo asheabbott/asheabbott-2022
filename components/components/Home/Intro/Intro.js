@@ -1,4 +1,4 @@
-import Button from "../../lib/Button/Button";
+import Button from "../../../lib/Button/Button";
 
 // import styles from "./Intro.module.scss";
 

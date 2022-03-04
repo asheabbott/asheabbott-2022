@@ -33,11 +33,8 @@
 
 					svg {
 						display: block;
-
-						use {
-							fill: $white;
-							transition: fill $transition-speed $transition-easing;
-						}
+						fill: $white;
+						transition: fill $transition-speed $transition-easing;
 					}
 
 					&:hover {
@@ -168,6 +165,7 @@
 }
 
 @media #{$break-sm-down} {
+	// TO DO
 	.mobile.landscape {
 		.siteHeader {
 			width: calc(100% - 40px);

@@ -16,7 +16,6 @@ import "../styles/images.scss";
 import "../styles/loading.scss";
 import "../styles/mixins.scss";
 import "../styles/navigation-main.scss";
-import "../styles/page.scss";
 import "../styles/project.scss";
 import "../styles/reset.scss";
 import "../styles/svg.scss";
