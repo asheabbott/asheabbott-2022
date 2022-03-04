@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../../lib/Header/Header";
 import Hero from "../Hero/Hero";
 import Intro from "../Intro/Intro";
+import Footer from "../../lib/Footer/Footer";
 
 import styles from "./Home.module.scss";
 
@@ -21,7 +22,7 @@ const Home = () => {
 				<Hero />
 				<Intro />
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

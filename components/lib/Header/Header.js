@@ -8,7 +8,7 @@ import useMediaQuery from "../../../utilities/useMediaQuery";
 
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ home = false }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
