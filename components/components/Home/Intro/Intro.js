@@ -1,7 +1,5 @@
 import Button from "../../../lib/Button/Button";
 
-// import styles from "./Intro.module.scss";
-
 const Intro = () => {
 	return (
 		<section className="intro">

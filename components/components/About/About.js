@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../../lib/Header/Header";
 import PageHeader from "../../lib/PageHeader/PageHeader";
 import Bio from "./Bio/Bio";
+import Skills from "./Skills/Skills";
 import Footer from "../../lib/Footer/Footer";
 
 import styles from "./About.module.scss";
@@ -21,6 +22,7 @@ const About = () => {
 			<main>
         <PageHeader title="About" />
         <Bio />
+				<Skills />
 			</main>
 			<Footer />
 		</div>
