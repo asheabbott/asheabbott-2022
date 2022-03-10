@@ -1,4 +1,4 @@
-const path = "/images/projects";
+const imgPath = "/images/projects";
 
 const beyondDefinition = "Beyond Definition (formerly Bates Creative)";
 
@@ -36,16 +36,16 @@ const projectsDB = [
 		awards: ["Communicator Awards, Award of Distinction"],
 		agency: beyondDefinition,
 		video: "363687724",
-		thumbnail: `${path}/transurban/transurban-thumbnail.jpg`,
+		thumbnail: `${imgPath}/transurban/transurban-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/transurban/transurban-mockup-1.jpg`,
+				path: `${imgPath}/transurban/transurban-mockup-1.jpg`,
 				width: 2400,
 				height: 3793,
 				alt: "Express Lanes website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/transurban/transurban-mockup-2.jpg`,
+				path: `${imgPath}/transurban/transurban-mockup-2.jpg`,
 				width: 2400,
 				height: 3793,
 				alt: "Sample pages from the Express Lanes website shown overlapping, in desktop view",
@@ -80,16 +80,16 @@ const projectsDB = [
 		],
 		agency: beyondDefinition,
 		video: "363687772",
-		thumbnail: `${path}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
+		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/carol-highsmith/carol-highsmith-mockup-1.jpg`,
+				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-1.jpg`,
 				width: 2400,
 				height: 6868,
 				alt: "Carol Highsmith's America website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/carol-highsmith/carol-highsmith-mockup-2.jpg`,
+				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-2.jpg`,
 				width: 2400,
 				height: 6868,
 				alt: "Sample pages from the Carol Highsmith's America website shown overlapping, in desktop view",
@@ -128,16 +128,16 @@ const projectsDB = [
 		],
 		agency: beyondDefinition,
 		video: null,
-		thumbnail: `${path}/afa/air-force-association-thumbnail.jpg`,
+		thumbnail: `${imgPath}/afa/air-force-association-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/afa/air-force-association-mockup-1.jpg`,
+				path: `${imgPath}/afa/air-force-association-mockup-1.jpg`,
 				width: 2400,
 				height: 4201,
 				alt: "Air Force Association website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/afa/air-force-association-mockup-2.jpg`,
+				path: `${imgPath}/afa/air-force-association-mockup-2.jpg`,
 				width: 2400,
 				height: 4201,
 				alt: "Sample pages from the Air Force Association website shown overlapping, in desktop view",
@@ -162,16 +162,16 @@ const projectsDB = [
 		awards: null,
 		agency: beyondDefinition,
 		video: "363687804",
-		thumbnail: `${path}/wfp/world-food-program-usa-thumbnail.jpg`,
+		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/wfp/world-food-program-usa-mockup-1.jpg`,
+				path: `${imgPath}/wfp/world-food-program-usa-mockup-1.jpg`,
 				width: 2400,
 				height: 3624,
 				alt: "World Food Program USA website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/wfp/world-food-program-usa-mockup-2.jpg`,
+				path: `${imgPath}/wfp/world-food-program-usa-mockup-2.jpg`,
 				width: 2400,
 				height: 3624,
 				alt: "Sample pages from the World Food Program USA website shown overlapping, in desktop view",
@@ -204,16 +204,16 @@ const projectsDB = [
 		awards: null,
 		agency: beyondDefinition,
 		video: "363687826",
-		thumbnail: `${path}/aria/aria-thumbnail.jpg`,
+		thumbnail: `${imgPath}/aria/aria-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/aria/aria-mockup-1.jpg`,
+				path: `${imgPath}/aria/aria-mockup-1.jpg`,
 				width: 2400,
 				height: 3839,
 				alt: "American Risk and Insurance Association website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/aria/aria-mockup-2.jpg`,
+				path: `${imgPath}/aria/aria-mockup-2.jpg`,
 				width: 2400,
 				height: 3839,
 				alt: "Sample pages from the American Risk and Insurance Association website shown overlapping, in desktop view",
@@ -250,16 +250,16 @@ const projectsDB = [
 		awards: ["Communicator Awards, Award of Excellence"],
 		agency: beyondDefinition,
 		video: "372482869",
-		thumbnail: `${path}/moaa/moaa-thumbnail.jpg`,
+		thumbnail: `${imgPath}/moaa/moaa-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/moaa/moaa-mockup-1.jpg`,
+				path: `${imgPath}/moaa/moaa-mockup-1.jpg`,
 				width: 2400,
 				height: 3651,
 				alt: "Military Officers Association of America website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${path}/moaa/moaa-mockup-2.jpg`,
+				path: `${imgPath}/moaa/moaa-mockup-2.jpg`,
 				width: 2400,
 				height: 3651,
 				alt: "Sample pages from the Military Officers Association of America website shown overlapping, in desktop view",
@@ -284,16 +284,16 @@ const projectsDB = [
 		awards: null,
 		agency: beyondDefinition,
 		video: "363687847",
-		thumbnail: `${path}/unisys/unisys-linesight-thumbnail.jpg`,
+		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/unisys/unisys-linesight-mockup-1.jpg`,
+				path: `${imgPath}/unisys/unisys-linesight-mockup-1.jpg`,
 				width: 2400,
 				height: 2092,
 				alt: "Unisys Linesight web experience homepage and first section screen",
 			},
 			{
-				path: `${path}/unisys/unisys-linesight-mockup-2.jpg`,
+				path: `${imgPath}/unisys/unisys-linesight-mockup-2.jpg`,
 				width: 2400,
 				height: 2092,
 				alt: "Unisys Linesight web experience second and third section screens",
@@ -319,16 +319,16 @@ const projectsDB = [
 		awards: ["W3 Awards, Silver", "AIGA 50"],
 		agency: beyondDefinition,
 		video: "363687856",
-		thumbnail: `${path}/bates-creative/bates-creative-thumbnail.jpg`,
+		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.jpg`,
 		screenshots: [
 			{
-				path: `${path}/bates-creative/bates-creative-mockup-1.jpg`,
+				path: `${imgPath}/bates-creative/bates-creative-mockup-1.jpg`,
 				width: 2400,
 				height: 5964,
 				alt: "Bates Creative website homepage screens, in desktop view",
 			},
 			{
-				path: `${path}/bates-creative/bates-creative-mockup-2.jpg`,
+				path: `${imgPath}/bates-creative/bates-creative-mockup-2.jpg`,
 				width: 2400,
 				height: 5964,
 				alt: "Sample pages from the Bates Creative website shown overlapping, in desktop view",

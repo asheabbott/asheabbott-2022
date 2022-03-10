@@ -21,7 +21,7 @@ import "../styles/svg.scss";
 import "../styles/typography.scss";
 import "../styles/video.scss";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
 	return <Component {...pageProps} />;
 }
 

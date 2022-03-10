@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createContext, useRef, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,10 +11,25 @@ import LogoMobile from "./logos/LogoMobile";
 
 import styles from "./Header.module.scss";
 
-const Header = ({ home = false }) => {
+const Header = ({ home = false, setTopSpace }) => {
+	const headerRef = useRef(null);
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
+		const header = headerRef.current;
+		const style = window.getComputedStyle(header);
+		const headerH = header.getBoundingClientRect().height;
+		const headerTop = parseInt(style.top);
+
+		setTopSpace(headerH + (headerTop * 5));
+
+
+    // // Set minimum height on main element
+    // main.css({minHeight: `calc(100vh - ${bottomSpace}px)`});
+
+    // // Set page header top padding
+    // pageHeader.css({paddingTop: `${topSpace}px`});
+		
 		document.querySelector("body").classList.add("loaded");
 	}, []);
 
@@ -29,7 +44,7 @@ const Header = ({ home = false }) => {
 				Skip to main content
 			</a>
 			<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
-			<header className={styles.siteHeader}>
+			<header className={styles.siteHeader} ref={headerRef}>
 				<div className="header-inner">
 					<div className={`flex ${styles.flex}`}>
 						<div className={styles.logo}>
@@ -39,7 +54,9 @@ const Header = ({ home = false }) => {
 								}`}
 							>
 								<Link href="/">
-									<a aria-label="Navigate to the homepage">{useMediaQuery(600) ? <Logo /> : <LogoMobile />}</a>
+									<a aria-label="Navigate to the homepage">
+										{useMediaQuery(600) ? <Logo /> : <LogoMobile />}
+									</a>
 								</Link>
 							</div>
 						</div>

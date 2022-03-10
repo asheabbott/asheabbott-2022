@@ -1,30 +1,25 @@
-import Head from "next/head";
-
-import Header from "../../lib/Header/Header";
+import Page from "../../lib/Page/Page";
 import PageHeader from "../../lib/PageHeader/PageHeader";
 import Bio from "./Bio/Bio";
 import Skills from "./Skills/Skills";
-import Footer from "../../lib/Footer/Footer";
 
 import styles from "./About.module.scss";
 
 const About = () => {
+	const meta = {
+		// TO DO
+		title: "Ashe Abbott DiBlasi",
+		description: "",
+		keywords: "",
+	};
+
 	return (
 		<div className={styles.about}>
-			<Head>
-				{/* TO DO */}
-				<title>Ashe Abbott DiBlasi</title>
-				<meta name="description" content="" />
-				<meta name="keywords" content="" />
-			</Head>
-
-			<Header />
-			<main>
-        <PageHeader title="About" />
-        <Bio />
+			<Page meta={meta}>
+				<PageHeader title="About" />
+				<Bio />
 				<Skills />
-			</main>
-			<Footer />
+			</Page>
 		</div>
 	);
 };

@@ -1,20 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect } from "react";
-
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = ({ footerBufferHeight, setFooterBufferHeight }) => {
+	const footerRef = useRef(null);
+
 	useEffect(() => {
-		// const style = Window.getComputedStyle(Footer);
-		// const footerH = Footer.offsetHeight;
-		// const footerOffset = parseInt(style.bottom);
-		// const footerBuffer = Footer.find(".footer-buffer");
-		// footerBuffer.css({ height: `${footerH + footerOffset * 2.4}px` });
+		const footer = footerRef.current;
+		const style = window.getComputedStyle(footer);
+		const footerH = footer.getBoundingClientRect().height;
+		const footerOffset = parseInt(style.bottom);
+
+		setFooterBufferHeight(`${footerH + footerOffset * 2.4}px`);
 	}, []);
 
 	return (
 		<>
-			<footer className={styles.siteFooter}>
+			<footer className={styles.siteFooter} ref={footerRef}>
 				<div className={`flex ${styles.flex}`}>
 					<div className={styles.text}>
 						<a className={styles.email} href="mailto:ashe@asheabbott.com">
@@ -68,7 +70,11 @@ const Footer = () => {
 					</div>
 				</div>
 			</footer>
-			<div className={styles.footerBuffer} aria-hidden="true"></div>
+			<div
+				className={styles.footerBuffer}
+				style={{ height: footerBufferHeight }}
+				aria-hidden="true"
+			></div>
 			{/* TO DO */}
 			{/* <div className="loading">
 				<div className="loading-icon">

@@ -1,28 +1,23 @@
-import Head from "next/head";
-
-import Header from "../../lib/Header/Header";
+import Page from "../../lib/Page/Page";
 import Hero from "./Hero/Hero";
 import Intro from "./Intro/Intro";
-import Footer from "../../lib/Footer/Footer";
 
 import styles from "./Home.module.scss";
 
 const Home = () => {
+	const meta = {
+		// TO DO
+		title: "Ashe Abbott DiBlasi",
+		description: "",
+		keywords: "",
+	};
+
 	return (
 		<div className={styles.home}>
-			<Head>
-				{/* TO DO */}
-				<title>Ashe Abbott DiBlasi</title>
-				<meta name="description" content="" />
-				<meta name="keywords" content="" />
-			</Head>
-
-			<Header />
-			<main>
+			<Page meta={meta}>
 				<Hero />
 				<Intro />
-			</main>
-			<Footer />
+			</Page>
 		</div>
 	);
 };
