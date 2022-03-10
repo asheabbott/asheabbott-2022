@@ -1,0 +1,61 @@
+@import "../../../../../../styles//variables.scss";
+
+.projectNavSection {
+	margin-bottom: 0;
+
+	.flex {
+		flex-wrap: wrap;
+		margin: -5px 5px;
+
+		.project {
+			width: calc(50% - 10px);
+			margin: 5px;
+
+			@media #{$break-sm-up} {
+				width: calc(25% - 10px);
+			}
+
+			@media #{$break-lg-up} {
+				width: calc(12.5% - 10px);
+			}
+
+			.projectInner {
+				&.mobileDesktop {
+					display: block;
+
+					@media #{$break-xs-up} {
+						display: none;
+					}
+
+					@media #{$break-lg-up} {
+						display: block;
+					}
+				}
+
+				&.tablet {
+					display: none;
+
+					@media #{$break-xs-up} {
+						display: block;
+					}
+
+					@media #{$break-lg-up} {
+						display: none;
+					}
+				}
+
+				a {
+					display: block;
+					background-size: cover;
+					background-repeat: no-repeat;
+
+					&:after {
+						content: "";
+						display: block;
+						padding-bottom: 56.25%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,15 +1,14 @@
 import Link from "next/link";
-
 import useMediaQuery from "../../../../../utilities/useMediaQuery";
-
+import Button from "../../../../lib/Button/Button";
 import styles from "./Preview.module.scss";
 
 const Preview = ({ project }) => {
 	const path = `/work/${project.slug}`;
 
 	return (
-		<div key={project.name} className="project">
-			<div className="name">
+		<div key={project.name} className={styles.preview}>
+			<div className={styles.name}>
 				<h2>
 					<Link href={path}>
 						<a>{project.name}</a>
@@ -24,7 +23,10 @@ const Preview = ({ project }) => {
 						}`}
 					>
 						<Link href={path}>
-							<a aria-label={`Navigate to ${project.name} project`}></a>
+							<a
+								style={{ backgroundImage: `url(${project.thumbnail})` }}
+								aria-label={`Navigate to ${project.name} project`}
+							></a>
 						</Link>
 					</div>
 				</div>
@@ -35,15 +37,11 @@ const Preview = ({ project }) => {
 						</div>
 						<div className={styles.contributions}>
 							<p>
-								<b>My Contributions:</b>
-								{project.contributions.map((contribution) => {
-									return contribution;
-								})}
+								<b>My Contributions: </b>
+								{project.contributions.join(", ")}
 							</p>
 						</div>
-						<Link href={path}>
-							<a className="button">View Details</a>
-						</Link>
+						<Button text="View Details" href={path} />
 					</div>
 				</div>
 			</div>

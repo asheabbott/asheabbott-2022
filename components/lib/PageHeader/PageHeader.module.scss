@@ -6,4 +6,19 @@
 	h1 {
 		color: $white;
 	}
+
+	&.projectHeader {
+		h1 {
+			span {
+				display: block;
+				font-weight: $font-weight-medium;
+				font-size: $font-size-h2-mobile;
+				text-transform: none;
+
+				@media #{$break-sm-up} {
+					font-size: $font-size-h2;
+				}
+			}
+		}
+	}
 }

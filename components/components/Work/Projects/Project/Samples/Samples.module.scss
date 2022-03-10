@@ -1,0 +1,21 @@
+@import "../../../../../../styles/variables.scss";
+
+.sampleSection {
+  .flex {
+    flex-direction: column;
+    margin: -15px;
+
+    @media #{$break-lg-up} {
+      flex-direction: row;
+    }
+
+    .screenshot {
+      width: calc(100% - 30px);
+      margin: 15px;
+
+      @media #{$break-lg-up} {
+        width: calc(50% - 30px);
+      }
+    }
+  }
+}

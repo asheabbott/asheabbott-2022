@@ -1,10 +1,18 @@
 import styles from "./PageHeader.module.scss";
 
-const PageHeader = ({ title }) => {
+const PageHeader = ({ project = false, title }) => {
 	return (
-		<header className={styles.pageHeader}>
+		<header
+			className={`${styles.pageHeader} ${project ? styles.projectHeader : ""}`}
+		>
 			<div className="container">
-				<h1 className="animate">{title}</h1>
+				{project ? (
+					<h1 className="animate">
+						Project: <span>{title}</span>
+					</h1>
+				) : (
+					<h1 className="animate">{title}</h1>
+				)}
 			</div>
 		</header>
 	);

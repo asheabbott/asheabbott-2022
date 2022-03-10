@@ -15,12 +15,12 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "https://expresslanes.com",
-				target: "_blank",
+				external: true,
 			},
 			{
 				text: "Read Case Study",
 				url: "https://beyond-definition.com/case_studies/transurban",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "Drupal Website",
@@ -33,13 +33,23 @@ const projectsDB = [
 			"Website Design",
 			"Front-End Development",
 		],
-		awards: ["Communicator Awards", "Award of Distinction"],
+		awards: ["Communicator Awards, Award of Distinction"],
 		agency: beyondDefinition,
 		video: "363687724",
 		thumbnail: `${path}/transurban/transurban-thumbnail.jpg`,
 		screenshots: [
-			`${path}/transurban/transurban-mockup-1.jpg`,
-			`${path}/transurban/transurban-mockup-2.jpg`,
+			{
+				path: `${path}/transurban/transurban-mockup-1.jpg`,
+				width: 2400,
+				height: 3793,
+				alt: "Express Lanes website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/transurban/transurban-mockup-2.jpg`,
+				width: 2400,
+				height: 3793,
+				alt: "Sample pages from the Express Lanes website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -52,7 +62,7 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "http://carolhighsmithamerica.com",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "WordPress Website",
@@ -72,8 +82,18 @@ const projectsDB = [
 		video: "363687772",
 		thumbnail: `${path}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
 		screenshots: [
-			`${path}/carol-highsmith/carol-highsmith-mockup-1.jpg`,
-			`${path}/carol-highsmith/carol-highsmith-mockup-2.jpg`,
+			{
+				path: `${path}/carol-highsmith/carol-highsmith-mockup-1.jpg`,
+				width: 2400,
+				height: 6868,
+				alt: "Carol Highsmith's America website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/carol-highsmith/carol-highsmith-mockup-2.jpg`,
+				width: 2400,
+				height: 6868,
+				alt: "Sample pages from the Carol Highsmith's America website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -86,12 +106,12 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "https://www.afa.org",
-				target: "_blank",
+				external: true,
 			},
 			{
 				text: "Read Case Study",
 				url: "https://beyond-definition.com/case_studies/air-force-association-website-redesign",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "Adobe Experience Manager Website",
@@ -110,8 +130,18 @@ const projectsDB = [
 		video: null,
 		thumbnail: `${path}/afa/air-force-association-thumbnail.jpg`,
 		screenshots: [
-			`${path}/afa/air-force-association-mockup-1.jpg`,
-			`${path}/afa/air-force-association-mockup-2.jpg`,
+			{
+				path: `${path}/afa/air-force-association-mockup-1.jpg`,
+				width: 2400,
+				height: 4201,
+				alt: "Air Force Association website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/afa/air-force-association-mockup-2.jpg`,
+				width: 2400,
+				height: 4201,
+				alt: "Sample pages from the Air Force Association website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -124,7 +154,7 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "https://www.wfpusa.org",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "WordPress Website",
@@ -134,8 +164,18 @@ const projectsDB = [
 		video: "363687804",
 		thumbnail: `${path}/wfp/world-food-program-usa-thumbnail.jpg`,
 		screenshots: [
-			`${path}/wfp/world-food-program-usa-mockup-1.jpg`,
-			`${path}/wfp/world-food-program-usa-mockup-2.jpg`,
+			{
+				path: `${path}/wfp/world-food-program-usa-mockup-1.jpg`,
+				width: 2400,
+				height: 3624,
+				alt: "World Food Program USA website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/wfp/world-food-program-usa-mockup-2.jpg`,
+				width: 2400,
+				height: 3624,
+				alt: "Sample pages from the World Food Program USA website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -148,7 +188,7 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "http://www.aria.org",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "WordPress Website",
@@ -166,8 +206,18 @@ const projectsDB = [
 		video: "363687826",
 		thumbnail: `${path}/aria/aria-thumbnail.jpg`,
 		screenshots: [
-			`${path}/aria/aria-mockup-1.jpg`,
-			`${path}/aria/aria-mockup-2.jpg`,
+			{
+				path: `${path}/aria/aria-mockup-1.jpg`,
+				width: 2400,
+				height: 3839,
+				alt: "American Risk and Insurance Association website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/aria/aria-mockup-2.jpg`,
+				width: 2400,
+				height: 3839,
+				alt: "Sample pages from the American Risk and Insurance Association website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -180,12 +230,12 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "https://www.moaa.org",
-				target: "_blank",
+				external: true,
 			},
 			{
 				text: "Read Case Study",
 				url: "https://beyond-definition.com/case_studies/moaa-website-redesign",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "Episerver Website",
@@ -202,8 +252,18 @@ const projectsDB = [
 		video: "372482869",
 		thumbnail: `${path}/moaa/moaa-thumbnail.jpg`,
 		screenshots: [
-			`${path}/moaa/moaa-mockup-1.jpg`,
-			`${path}/moaa/moaa-mockup-2.jpg`,
+			{
+				path: `${path}/moaa/moaa-mockup-1.jpg`,
+				width: 2400,
+				height: 3651,
+				alt: "Military Officers Association of America website homepage, in desktop and mobile views",
+			},
+			{
+				path: `${path}/moaa/moaa-mockup-2.jpg`,
+				width: 2400,
+				height: 3651,
+				alt: "Sample pages from the Military Officers Association of America website shown overlapping, in desktop view",
+			},
 		],
 	},
 	{
@@ -216,7 +276,7 @@ const projectsDB = [
 			{
 				text: "Visit Website",
 				url: "https://www.unisys.com/linesight-demo",
-				target: "_blank",
+				external: true,
 			},
 		],
 		technical: "Static Website",
@@ -226,8 +286,18 @@ const projectsDB = [
 		video: "363687847",
 		thumbnail: `${path}/unisys/unisys-linesight-thumbnail.jpg`,
 		screenshots: [
-			`${path}/unisys/unisys-linesight-mockup-1.jpg`,
-			`${path}/unisys/unisys-linesight-mockup-2.jpg`,
+			{
+				path: `${path}/unisys/unisys-linesight-mockup-1.jpg`,
+				width: 2400,
+				height: 2092,
+				alt: "Unisys Linesight web experience homepage and first section screen",
+			},
+			{
+				path: `${path}/unisys/unisys-linesight-mockup-2.jpg`,
+				width: 2400,
+				height: 2092,
+				alt: "Unisys Linesight web experience second and third section screens",
+			},
 		],
 	},
 	{
@@ -251,8 +321,18 @@ const projectsDB = [
 		video: "363687856",
 		thumbnail: `${path}/bates-creative/bates-creative-thumbnail.jpg`,
 		screenshots: [
-			`${path}/bates-creative/bates-creative-mockup-1.jpg`,
-			`${path}/bates-creative/bates-creative-mockup-2.jpg`,
+			{
+				path: `${path}/bates-creative/bates-creative-mockup-1.jpg`,
+				width: 2400,
+				height: 5964,
+				alt: "Bates Creative website homepage screens, in desktop view",
+			},
+			{
+				path: `${path}/bates-creative/bates-creative-mockup-2.jpg`,
+				width: 2400,
+				height: 5964,
+				alt: "Sample pages from the Bates Creative website shown overlapping, in desktop view",
+			},
 		],
 	},
 ];
