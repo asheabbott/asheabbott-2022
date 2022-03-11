@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PageContext from "../Page/PageContext";
 import styles from "./Footer.module.scss";
 
-const Footer = ({ footerBufferHeight, setFooterBufferHeight }) => {
+const Footer = () => {
 	const footerRef = useRef(null);
+	const pageData = useContext(PageContext);
 
 	useEffect(() => {
 		const footer = footerRef.current;
@@ -11,8 +13,8 @@ const Footer = ({ footerBufferHeight, setFooterBufferHeight }) => {
 		const footerH = footer.getBoundingClientRect().height;
 		const footerOffset = parseInt(style.bottom);
 
-		setFooterBufferHeight(`${footerH + footerOffset * 2.4}px`);
-	}, []);
+		pageData.setFooterBufferHeight(footerH + footerOffset * 2.4);
+	});
 
 	return (
 		<>
@@ -72,7 +74,7 @@ const Footer = ({ footerBufferHeight, setFooterBufferHeight }) => {
 			</footer>
 			<div
 				className={styles.footerBuffer}
-				style={{ height: footerBufferHeight }}
+				style={{ height: pageData.footerBufferHeight }}
 				aria-hidden="true"
 			></div>
 			{/* TO DO */}

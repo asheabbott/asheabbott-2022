@@ -1,9 +1,10 @@
-import { createContext, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import PageContext from "../Page/PageContext";
 import useMediaQuery from "../../../utilities/useMediaQuery";
 
 import Logo from "./logos/Logo";
@@ -11,9 +12,10 @@ import LogoMobile from "./logos/LogoMobile";
 
 import styles from "./Header.module.scss";
 
-const Header = ({ home = false, setTopSpace }) => {
+const Header = () => {
 	const headerRef = useRef(null);
 	const [menuOpen, setMenuOpen] = useState(false);
+	const pageData = useContext(PageContext);
 
 	useEffect(() => {
 		const header = headerRef.current;
@@ -21,17 +23,16 @@ const Header = ({ home = false, setTopSpace }) => {
 		const headerH = header.getBoundingClientRect().height;
 		const headerTop = parseInt(style.top);
 
-		setTopSpace(headerH + (headerTop * 5));
+		pageData.setTopSpace(headerH + headerTop * 5);
 
-
-    // // Set minimum height on main element
-    // main.css({minHeight: `calc(100vh - ${bottomSpace}px)`});
-
-    // // Set page header top padding
-    // pageHeader.css({paddingTop: `${topSpace}px`});
-		
 		document.querySelector("body").classList.add("loaded");
-	}, []);
+	});
+
+	const handleBurger = () => {
+		setMenuOpen(true);
+
+
+	};
 
 	return (
 		<>
@@ -43,7 +44,9 @@ const Header = ({ home = false, setTopSpace }) => {
 			<a className="skip-to-content" href="#main">
 				Skip to main content
 			</a>
-			<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
+			{pageData.home && (
+				<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
+			)}
 			<header className={styles.siteHeader} ref={headerRef}>
 				<div className="header-inner">
 					<div className={`flex ${styles.flex}`}>
@@ -64,6 +67,7 @@ const Header = ({ home = false, setTopSpace }) => {
 							<button
 								className={styles.hamburger}
 								aria-label="Open or close main menu"
+								onClick={handleBurger}
 							>
 								<span></span>
 								<span></span>

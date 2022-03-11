@@ -1,0 +1,41 @@
+@import "./Menu.module.scss";
+
+.menuItem {
+	overflow: hidden;
+
+	a {
+		font-weight: $font-weight-black;
+		font-size: $font-size-h1-mobile;
+		color: $white;
+		line-height: 1;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color $transition-speed $transition-easing;
+
+		@media #{$break-sm-square-up} {
+			font-size: $font-size-h1;
+		}
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	&.currentMenuItem {
+		a {
+			color: $blue;
+		}
+	}
+}
+
+@media #{$break-sm-square-down} {
+	.mobile.landscape {
+		li {
+			margin: 15px;
+
+			a {
+				font-size: 41px;
+			}
+		}
+	}
+}

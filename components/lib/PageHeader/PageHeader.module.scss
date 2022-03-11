@@ -1,7 +1,14 @@
 @import "../../../styles/variables.scss";
 
 .pageHeader {
+	margin-bottom: $section-bottom-mobile;
+	padding-bottom: 30px;
 	background-color: $black;
+
+	@media #{$break-sm-up} {
+		margin-bottom: $section-bottom;
+		padding-bottom: 50px;
+	}
 
 	h1 {
 		color: $white;

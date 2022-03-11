@@ -14,7 +14,7 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
-			<Page meta={meta}>
+			<Page meta={meta} home={true}>
 				<Hero />
 				<Intro />
 			</Page>

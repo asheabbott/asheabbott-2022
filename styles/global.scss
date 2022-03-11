@@ -28,16 +28,6 @@ main {
   transition: transform $transition-speed $transition-easing;
 }
 
-.page-header {
-  margin-bottom: $section-bottom-mobile;
-  padding-bottom: 30px;
-
-  @media #{$break-sm-up} {
-    margin-bottom: $section-bottom;
-    padding-bottom: 50px;
-  }
-}
-
 section {
   margin-bottom: $section-bottom-mobile;
 

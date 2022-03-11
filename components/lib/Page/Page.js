@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
+import PageContext from "./PageContext";
+
 import Header from "../Header/Header";
+import Menu from "../Menu/Menu";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 
-const Page = ({ meta, children }) => {
+const Page = ({ meta, home = false, children }) => {
 	const [topSpace, setTopSpace] = useState(null);
 	const [mainMargin, setMainMargin] = useState(null);
 	const [footerBufferHeight, setFooterBufferHeight] = useState(null);
@@ -13,20 +16,33 @@ const Page = ({ meta, children }) => {
 
 	useEffect(() => {
 		setBottomSpace(mainMargin + footerBufferHeight);
-	}, []);
+	}, [mainMargin, footerBufferHeight]);
 
 	return (
-		<>
+		<PageContext.Provider
+			value={{
+				topSpace,
+				setTopSpace,
+				mainMargin,
+				setMainMargin,
+				footerBufferHeight,
+				setFooterBufferHeight,
+				bottomSpace,
+				setBottomSpace,
+				home,
+			}}
+		>
 			<Head>
 				<title>{meta.title}</title>
 				<meta name="description" content={meta.description} />
 				<meta name="keywords" content={meta.keywords} />
 			</Head>
 
-			<Header setTopSpace={setTopSpace} />
-			<Main setMainMargin={setMainMargin}>{children}</Main>
-			<Footer setFooterBufferHeight={setFooterBufferHeight} />
-		</>
+			<Header />
+			<Menu />
+			<Main>{children}</Main>
+			<Footer />
+		</PageContext.Provider>
 	);
 };
 

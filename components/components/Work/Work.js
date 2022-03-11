@@ -16,11 +16,9 @@ const Work = () => {
 	return (
 		<div className={styles.work}>
 			<Page meta={meta}>
-				<>
-					<PageHeader title="Work" />
-					<Intro />
-					<Projects />
-				</>
+				<PageHeader title="Work" />
+				<Intro />
+				<Projects />
 			</Page>
 		</div>
 	);

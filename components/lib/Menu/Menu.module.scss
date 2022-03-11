@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+
+.mainNavigation {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	// transform: translateY(-100%);
+	background-color: $black;
+	transition: transform $transition-speed $transition-easing;
+	z-index: 99;
+
+	.container {
+		height: 100%;
+
+		.mainMenu {
+			height: calc(100% - 290px);
+			align-items: center;
+			padding: 130px 0 160px 0;
+
+			@media #{$break-sm-up} {
+				height: calc(100% - 260px);
+				padding: 130px 0;
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+@media #{$break-sm-square-down} {
+	// TO DO
+	.mobile.landscape {
+		.mainNavigation {
+			.mainMenu {
+				height: calc(100% - 260px);
+				padding: 130px 0;
+
+				.menuMainMenuContainer {
+					width: 100%;
+
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+						margin: -15px;
+
+						// li {
+						// 	margin: 15px;
+
+						// 	a {
+						// 		font-size: 41px;
+						// 	}
+						// }
+					}
+				}
+			}
+		}
+	}
+}
