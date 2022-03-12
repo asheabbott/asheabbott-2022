@@ -1,8 +1,6 @@
-import { useRef, useState, useEffect, useContext } from "react";
+import { useRef, useEffect, useContext } from "react";
 import Head from "next/head";
-// import Image from "next/image";
 import Link from "next/link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import PageContext from "../Page/PageContext";
 import useMediaQuery from "../../../utilities/useMediaQuery";
@@ -14,7 +12,6 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
 	const headerRef = useRef(null);
-	const [menuOpen, setMenuOpen] = useState(false);
 	const pageData = useContext(PageContext);
 
 	useEffect(() => {
@@ -29,9 +26,7 @@ const Header = () => {
 	});
 
 	const handleBurger = () => {
-		setMenuOpen(true);
-
-
+		pageData.setMenuOpen(!pageData.menuOpen);
 	};
 
 	return (
@@ -65,7 +60,9 @@ const Header = () => {
 						</div>
 						<div className={styles.menuBtn}>
 							<button
-								className={styles.hamburger}
+								className={`${styles.hamburger} ${
+									pageData.menuOpen ? styles.open : ""
+								}`}
 								aria-label="Open or close main menu"
 								onClick={handleBurger}
 							>

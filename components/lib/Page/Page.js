@@ -13,6 +13,7 @@ const Page = ({ meta, home = false, children }) => {
 	const [mainMargin, setMainMargin] = useState(null);
 	const [footerBufferHeight, setFooterBufferHeight] = useState(null);
 	const [bottomSpace, setBottomSpace] = useState(null);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		setBottomSpace(mainMargin + footerBufferHeight);
@@ -29,6 +30,8 @@ const Page = ({ meta, home = false, children }) => {
 				setFooterBufferHeight,
 				bottomSpace,
 				setBottomSpace,
+				menuOpen,
+				setMenuOpen,
 				home,
 			}}
 		>

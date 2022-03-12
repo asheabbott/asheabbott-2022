@@ -13,11 +13,15 @@ const Main = ({ children }) => {
 		pageData.setMainMargin(mainMargin);
 	}, []);
 
+	const dynamicStyles = {
+		main: {
+			transform: pageData.menuOpen ? "translateY(100vh)" : "translateY(0)",
+			minHeight: `calc(100vh - ${pageData.bottomSpace}px)`,
+		},
+	};
+
 	return (
-		<main
-			ref={mainRef}
-			style={{ minHeight: `calc(100vh - ${pageData.bottomSpace}px)` }}
-		>
+		<main ref={mainRef} style={dynamicStyles.main}>
 			{children}
 		</main>
 	);
