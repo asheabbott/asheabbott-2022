@@ -3,64 +3,74 @@
 
 html,
 body {
-  background-color: $white;
-  overflow-x: hidden;
-  text-size-adjust: none;
-  -webkit-tap-highlight-color: transparent;
+	background-color: $white;
+	overflow-x: hidden;
+	text-size-adjust: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
-  position: relative;
-  font-family: $font-family;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-body-mobile;
-  line-height: $line-height-body;
+	position: relative;
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: $font-size-body-mobile;
+	line-height: $line-height-body;
 
-  @media #{$break-sm-up} {
-    font-size: $font-size-body;
-  }
+	@media #{$break-sm-up} {
+		font-size: $font-size-body;
+	}
 }
 
 main {
-  margin-bottom: 65px;
-  padding-bottom: 1px;
-  background-color: $white;
-  transition: transform $transition-speed $transition-easing;
+	margin-bottom: 65px;
+	padding-bottom: 1px;
+	background-color: $white;
+	transition: transform $transition-speed $transition-easing;
 }
 
 section {
-  margin-bottom: $section-bottom-mobile;
+	margin-bottom: $section-bottom-mobile;
 
-  @media #{$break-sm-up} {
-    margin-bottom: $section-bottom;
-  }
+	@media #{$break-sm-up} {
+		margin-bottom: $section-bottom;
+	}
 }
 
 .container {
-  @include container;
+	@include container;
 }
 
 .flex {
-  display: flex;
+	display: flex;
 }
 
 .no-wrap {
-  white-space: nowrap;
+	white-space: nowrap;
 }
 
 ::selection {
-  background-color: $turquoise;
+	background-color: $turquoise;
 }
 
 .animate {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.5s $transition-easing, transform $transition-speed $transition-easing;
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 0.5s $transition-easing,
+		transform $transition-speed $transition-easing;
+}
+
+.fade-out {
+	opacity: 0;
+	transition: opacity $transition-speed $transition-easing;
+}
+
+.fade-end {
+  display: none;
 }
 
 body.loaded {
-  .animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	.animate {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

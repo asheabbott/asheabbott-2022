@@ -13,7 +13,6 @@ import "../styles/buttons.scss";
 import "../styles/font-face.scss";
 import "../styles/global.scss";
 import "../styles/images.scss";
-import "../styles/loading.scss";
 import "../styles/mixins.scss";
 import "../styles/navigation-main.scss";
 import "../styles/reset.scss";
@@ -23,6 +22,6 @@ import "../styles/video.scss";
 
 const MyApp = ({ Component, pageProps }) => {
 	return <Component {...pageProps} />;
-}
+};
 
 export default MyApp;

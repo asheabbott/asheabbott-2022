@@ -1,24 +1,56 @@
-import { useEffect, useRef, useContext } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageContext from "../Page/PageContext";
+import Loader from "./Loader/Loader";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
+	const [footerH, setFooterH] = useState(null);
+	const [footerOffset, setFooterOffset] = useState(null);
+	const [position, setPosition] = useState(null);
 	const footerRef = useRef(null);
 	const pageData = useContext(PageContext);
 
 	useEffect(() => {
 		const footer = footerRef.current;
 		const style = window.getComputedStyle(footer);
-		const footerH = footer.getBoundingClientRect().height;
-		const footerOffset = parseInt(style.bottom);
+
+		setFooterOffset(parseInt(style.bottom));
+		setFooterH(footer.getBoundingClientRect().height);
 
 		pageData.setFooterBufferHeight(footerH + footerOffset * 2.4);
-	});
+	}, [pageData, footerH, footerOffset]);
+
+	useEffect(() => {
+		if (pageData.home) {
+			if (
+				pageData.scroll === false ||
+				(pageData.scroll === true && pageData.menuOpen !== true)
+			) {
+				if (pageData.scrollTop > pageData.homeLogoBufferH) {
+					setPosition("translateY(0)");
+				} else {
+					setPosition(`translateY(${footerH + footerOffset}px)`);
+				}
+			}
+		}
+	}, [
+		footerH,
+		footerOffset,
+		pageData.homeLogoBufferH,
+		pageData.menuOpen,
+		pageData.scroll,
+		pageData.scrollTop,
+		pageData.home,
+	]);
 
 	return (
 		<>
-			<footer className={styles.siteFooter} ref={footerRef}>
+			<footer
+				className={styles.siteFooter}
+				ref={footerRef}
+				style={{ transform: position }}
+			>
 				<div className={`flex ${styles.flex}`}>
 					<div className={styles.text}>
 						<a className={styles.email} href="mailto:ashe@asheabbott.com">
@@ -77,31 +109,7 @@ const Footer = () => {
 				style={{ height: pageData.footerBufferHeight }}
 				aria-hidden="true"
 			></div>
-			{/* TO DO */}
-			{/* <div className="loading">
-				<div className="loading-icon">
-					<div className="letter-a">
-						<svg>
-							<use xlink:href="#loading-screen-a" />
-						</svg>
-					</div>
-					<div className="letter-s">
-						<svg>
-							<use xlink:href="#loading-screen-s" />
-						</svg>
-					</div>
-					<div className="letter-h">
-						<svg>
-							<use xlink:href="#loading-screen-h" />
-						</svg>
-					</div>
-					<div className="letter-e">
-						<svg>
-							<use xlink:href="#loading-screen-e" />
-						</svg>
-					</div>
-				</div>
-			</div> */}
+			<Loader />
 		</>
 	);
 };

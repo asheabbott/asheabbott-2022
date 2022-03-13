@@ -1,4 +1,4 @@
-import { useRef, useEffect, useContext } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -11,19 +11,55 @@ import LogoMobile from "./logos/LogoMobile";
 import styles from "./Header.module.scss";
 
 const Header = () => {
+	const [headerH, setHeaderH] = useState(null);
+	const [position, setPosition] = useState(null);
 	const headerRef = useRef(null);
+	const homeLogoBufferRef = useRef(null);
 	const pageData = useContext(PageContext);
 
 	useEffect(() => {
 		const header = headerRef.current;
 		const style = window.getComputedStyle(header);
-		const headerH = header.getBoundingClientRect().height;
 		const headerTop = parseInt(style.top);
+		const homeLogoBuffer = homeLogoBufferRef.current;
+
+		setHeaderH(header.getBoundingClientRect().height);
 
 		pageData.setTopSpace(headerH + headerTop * 5);
 
+		if (pageData.home) {
+			pageData.setHomeLogoBufferH(
+				homeLogoBuffer.getBoundingClientRect().height
+			);
+		}
+
+		pageData.setLoaded(true);
 		document.querySelector("body").classList.add("loaded");
-	});
+	}, [pageData, headerH]);
+
+	useEffect(() => {
+		if (pageData.home) {
+			if (
+				pageData.scroll === false ||
+				(pageData.scroll === true && pageData.menuOpen !== true)
+			) {
+				if (pageData.scrollTop > pageData.homeLogoBufferH) {
+					setPosition("translateY(0)");
+				} else {
+					setPosition(
+						`translateY(-${pageData.homeLogoBufferH - 1 + headerH}px)`
+					);
+				}
+			}
+		}
+	}, [
+		headerH,
+		pageData.homeLogoBufferH,
+		pageData.menuOpen,
+		pageData.scroll,
+		pageData.scrollTop,
+		pageData.home,
+	]);
 
 	const handleBurger = () => {
 		pageData.setMenuOpen(!pageData.menuOpen);
@@ -40,9 +76,17 @@ const Header = () => {
 				Skip to main content
 			</a>
 			{pageData.home && (
-				<div className={styles.homeLogoBuffer} aria-hidden="true"></div>
+				<div
+					className={styles.homeLogoBuffer}
+					ref={homeLogoBufferRef}
+					aria-hidden="true"
+				></div>
 			)}
-			<header className={styles.siteHeader} ref={headerRef}>
+			<header
+				className={styles.siteHeader}
+				ref={headerRef}
+				style={{ transform: position }}
+			>
 				<div className="header-inner">
 					<div className={`flex ${styles.flex}`}>
 						<div className={styles.logo}>
