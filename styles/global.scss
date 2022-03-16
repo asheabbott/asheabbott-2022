@@ -59,15 +59,6 @@ section {
 		transform $transition-speed $transition-easing;
 }
 
-.fade-out {
-	opacity: 0;
-	transition: opacity $transition-speed $transition-easing;
-}
-
-.fade-end {
-  display: none;
-}
-
 body.loaded {
 	.animate {
 		opacity: 1;

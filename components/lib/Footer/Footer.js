@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageContext from "../Page/PageContext";
-import Loader from "./Loader/Loader";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
@@ -109,7 +108,6 @@ const Footer = () => {
 				style={{ height: pageData.footerBufferHeight }}
 				aria-hidden="true"
 			></div>
-			<Loader />
 		</>
 	);
 };

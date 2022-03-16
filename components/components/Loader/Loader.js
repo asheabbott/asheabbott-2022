@@ -1,30 +1,19 @@
-import { useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
-import PageContext from "../../Page/PageContext";
 import styles from "./Loader.module.scss";
 
-const Loader = () => {
-	const [transitionEnd, setTransitionEnd] = useState(false);
-	const pageData = useContext(PageContext);
-
-	let fadeClass = "";
-
-	if (pageData.loaded) {
-		if (transitionEnd) {
-			fadeClass = "fade-end";
-		} else {
-			fadeClass = "fade-out";
-		}
-	}
-
+const Loader = ({ routeChangeStart, routeChangeComplete, loading, loaded }) => {
 	return (
 		<div
-			className={`${styles.loading} ${fadeClass}`}
-			onTransitionEnd={() => {
-				setTransitionEnd(true);
-			}}
+			className={`${styles.loader} ${
+				loading || routeChangeStart
+					? styles.loading
+					: loaded || routeChangeComplete
+					? styles.loaded
+					: ""
+			}`}
 		>
-			<div className={styles.loadingIcon}>
+			<div className={styles.loaderIcon}>
 				<div className={styles.letterA}>
 					<div className={styles.imageWrap}>
 						<Image

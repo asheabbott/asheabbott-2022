@@ -32,9 +32,6 @@ const Header = () => {
 				homeLogoBuffer.getBoundingClientRect().height
 			);
 		}
-
-		pageData.setLoaded(true);
-		document.querySelector("body").classList.add("loaded");
 	}, [pageData, headerH]);
 
 	useEffect(() => {

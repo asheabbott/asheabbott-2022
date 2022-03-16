@@ -9,7 +9,6 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 
 const Page = ({ meta, home = false, children }) => {
-	const [loaded, setLoaded] = useState(false);
 	const [topSpace, setTopSpace] = useState(null);
 	const [homeLogoBufferH, setHomeLogoBufferH] = useState(null);
 	const [mainMargin, setMainMargin] = useState(null);
@@ -38,8 +37,6 @@ const Page = ({ meta, home = false, children }) => {
 	return (
 		<PageContext.Provider
 			value={{
-				loaded,
-				setLoaded,
 				topSpace,
 				setTopSpace,
 				homeLogoBufferH,
