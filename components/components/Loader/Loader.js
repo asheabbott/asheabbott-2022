@@ -1,16 +1,11 @@
-import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import styles from "./Loader.module.scss";
 
-const Loader = ({ routeChangeStart, routeChangeComplete, loading, loaded }) => {
+const Loader = ({ routeChange, loading }) => {
 	return (
 		<div
 			className={`${styles.loader} ${
-				loading || routeChangeStart
-					? styles.loading
-					: loaded || routeChangeComplete
-					? styles.loaded
-					: ""
+				loading || routeChange ? styles.loading : ""
 			}`}
 		>
 			<div className={styles.loaderIcon}>

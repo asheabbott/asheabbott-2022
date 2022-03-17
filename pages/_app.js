@@ -26,8 +26,7 @@ import "../styles/video.scss";
 
 const MyApp = ({ Component, pageProps }) => {
 	const router = useRouter();
-	const [routeChangeStart, setRouteChangeStart] = useState(false);
-	const [routeChangeComplete, setRouteChangeComplete] = useState(false);
+	const [routeChange, setRouteChange] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [loaded, setLoaded] = useState(false);
 
@@ -38,40 +37,32 @@ const MyApp = ({ Component, pageProps }) => {
 
 	useEffect(() => {
 		router.events.on("routeChangeStart", (url) => {
-			setRouteChangeStart(true);
-			setRouteChangeComplete(false);
+			setRouteChange(true);
 		});
 
 		router.events.on("routeChangeComplete", (url) => {
-			setRouteChangeStart(false);
-			setRouteChangeComplete(true);
+			setRouteChange(false);
 		});
 
 		router.events.on("routeChangeError", (url) => {
-			setRouteChangeStart(false);
-			setRouteChangeComplete(true);
+			setRouteChange(false);
 		});
 	}, [router]);
 
 	useEffect(() => {
 		if (loaded) {
+			setLoading(false);
 			document.querySelector("body").classList.add("loaded");
 		}
 	}, [loaded]);
 
 	const handleLoaded = () => {
-		setLoading(false);
 		setLoaded(true);
 	};
 
 	return (
 		<>
-			<Loader
-				loading={loading}
-				loaded={loaded}
-				routeChangeStart={routeChangeStart}
-				routeChangeComplete={routeChangeComplete}
-			/>
+			<Loader loading={loading} routeChange={routeChange} />
 			<Component {...pageProps} />
 		</>
 	);

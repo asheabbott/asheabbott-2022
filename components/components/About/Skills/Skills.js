@@ -21,7 +21,7 @@ const Skills = () => {
 							);
 						})}
 					</div>
-					<div className={`${styles.skillHeaders} ${styles.flex} flex`}>
+					<div className={`${styles.skillLevels} ${styles.flex} flex`}>
 						{skillsDB.map((skillLevel) => {
 							return (
 								<div key={skillLevel.title} className={styles.skillLevel}>

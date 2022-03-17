@@ -1,38 +1,37 @@
-import Head from "next/head";
+// import Head from "next/head";
 
 import projectsDB from "../projectsDB";
 
-import Header from "../../../../lib/Header/Header";
+// import Header from "../../../../lib/Header/Header";
+import Page from "../../../../lib/Page/Page";
 import PageHeader from "../../../../lib/PageHeader/PageHeader";
 import Demo from "./Demo/Demo";
 import Details from "./Details/Details";
 import Samples from "./Samples/Samples";
 import Nav from "./Nav/Nav";
-import Footer from "../../../../lib/Footer/Footer";
+// import Footer from "../../../../lib/Footer/Footer";
 
 import styles from "./Project.module.scss";
 
 const Project = ({ id }) => {
+	const meta = {
+		// TO DO
+		title: "Ashe Abbott DiBlasi",
+		description: "",
+		keywords: "",
+	};
+
 	const project = projectsDB.find((project) => project.id === id);
 
 	return (
 		<div className={styles.project}>
-			<Head>
-				{/* TO DO */}
-				<title>Ashe Abbott DiBlasi</title>
-				<meta name="description" content="" />
-				<meta name="keywords" content="" />
-			</Head>
-
-			<Header />
-			<main>
+			<Page meta={meta}>
 				<PageHeader project={true} title={project.name} />
 				{project.video && <Demo project={project} />}
 				<Details project={project} />
 				<Samples project={project} />
 				<Nav />
-			</main>
-			<Footer />
+			</Page>
 		</div>
 	);
 };

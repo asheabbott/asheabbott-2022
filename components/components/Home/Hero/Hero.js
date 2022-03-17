@@ -15,7 +15,7 @@ const Hero = () => {
 			</div>
 			<div className={styles.heroReel}>
 				<div className="container">
-					<div className="video">
+					<div className="video" style={{ backgroundColor: "#f52d83" }}>
 						<iframe
 							src="https://player.vimeo.com/video/539800751?background=1"
 							width="640"

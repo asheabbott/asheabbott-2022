@@ -7,12 +7,11 @@
 			margin: -15px;
 
 			&.skillHeaders {
-        // TO DO
-				// display: none;
+				display: none;
 
-				// @media #{$break-xl-up} {
+				@media #{$break-xl-up} {
 					display: flex;
-				// }
+				}
 
 				.skillLevel {
 					margin-bottom: 0;

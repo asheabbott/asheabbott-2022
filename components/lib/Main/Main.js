@@ -11,7 +11,7 @@ const Main = ({ children }) => {
 		const mainMargin = parseInt(style.marginBottom);
 
 		pageData.setMainMargin(mainMargin);
-	}, []);
+	}, [pageData]);
 
 	const dynamicStyles = {
 		main: {
