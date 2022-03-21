@@ -2,6 +2,7 @@ import Page from "../../lib/Page/Page";
 import PageHeader from "../../lib/PageHeader/PageHeader";
 import Intro from "./Intro/Intro";
 import Projects from "./Projects/Projects";
+import Awards from "./Awards/Awards";
 
 import styles from "./Work.module.scss";
 
@@ -19,6 +20,7 @@ const Work = () => {
 				<PageHeader title="Work" />
 				<Intro />
 				<Projects />
+				<Awards />
 			</Page>
 		</div>
 	);

@@ -35,7 +35,10 @@ const projectsDB = [
 		],
 		awards: ["Communicator Awards, Award of Distinction"],
 		agency: beyondDefinition,
-		video: "363687724",
+		video: {
+			number: "363687724",
+			color: "",
+		},
 		thumbnail: `${imgPath}/transurban/transurban-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -73,13 +76,15 @@ const projectsDB = [
 		],
 		awards: [
 			"W3 Awards, Best in Show",
-			"W3 Awards, Gold",
-			"W3 Awards, Gold",
+			"W3 Awards, Gold (x2)",
 			"W3 Awards, Silver",
 			"GDUSA American Graphic Design Awards",
 		],
 		agency: beyondDefinition,
-		video: "363687772",
+		video: {
+			number: "363687772",
+			color: "#1c1411",
+		},
 		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -161,7 +166,10 @@ const projectsDB = [
 		contributions: ["Website Strategy", "User Experience Design"],
 		awards: null,
 		agency: beyondDefinition,
-		video: "363687804",
+		video: {
+			number: "363687804",
+			color: "",
+		},
 		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -203,7 +211,10 @@ const projectsDB = [
 		],
 		awards: null,
 		agency: beyondDefinition,
-		video: "363687826",
+		video: {
+			number: "363687826",
+			color: "",
+		},
 		thumbnail: `${imgPath}/aria/aria-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -249,7 +260,10 @@ const projectsDB = [
 		],
 		awards: ["Communicator Awards, Award of Excellence"],
 		agency: beyondDefinition,
-		video: "372482869",
+		video: {
+			number: "372482869",
+			color: "",
+		},
 		thumbnail: `${imgPath}/moaa/moaa-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -283,7 +297,10 @@ const projectsDB = [
 		contributions: ["Front-End Development"],
 		awards: null,
 		agency: beyondDefinition,
-		video: "363687847",
+		video: {
+			number: "363687847",
+			color: "",
+		},
 		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.jpg`,
 		screenshots: [
 			{
@@ -318,7 +335,10 @@ const projectsDB = [
 		],
 		awards: ["W3 Awards, Silver", "AIGA 50"],
 		agency: beyondDefinition,
-		video: "363687856",
+		video: {
+			number: "363687856",
+			color: "",
+		},
 		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.jpg`,
 		screenshots: [
 			{

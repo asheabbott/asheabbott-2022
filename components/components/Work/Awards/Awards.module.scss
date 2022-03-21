@@ -1,0 +1,46 @@
+@import "../../../../styles/variables.scss";
+
+.awards {
+	margin-bottom: 0;
+	padding: $section-bottom-mobile 0;
+	background-color: $black;
+
+	@media #{$break-sm-up} {
+		padding: $section-bottom 0;
+	}
+
+	.awardLogos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: -30px;
+
+		@media (min-width: $break-md) and (orientation: portrait),
+			(min-width: $break-lg) and (orientation: landscape) {
+			margin: -50px;
+		}
+
+		.awardLogo {
+			width: calc(50% - 60px);
+			margin: 30px;
+
+			@media #{$break-sm-up} {
+				width: calc(33.33% - 60px);
+			}
+
+			@media #{$break-md-up} {
+				width: calc(25% - 100px);
+				margin: 50px;
+			}
+
+			@media #{$break-lg-up} {
+				width: calc(20% - 100px);
+			}
+
+			img {
+				display: block;
+			}
+		}
+	}
+}

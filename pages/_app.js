@@ -20,7 +20,6 @@ import "../styles/images.scss";
 import "../styles/mixins.scss";
 import "../styles/navigation-main.scss";
 import "../styles/reset.scss";
-import "../styles/svg.scss";
 import "../styles/typography.scss";
 import "../styles/video.scss";
 
@@ -36,18 +35,24 @@ const MyApp = ({ Component, pageProps }) => {
 	}, []);
 
 	useEffect(() => {
-		router.events.on("routeChangeStart", (url) => {
+		const handleStart = (url) => {
 			setRouteChange(true);
-		});
+		};
 
-		router.events.on("routeChangeComplete", (url) => {
+		const handleComplete = (url) => {
 			setRouteChange(false);
-		});
+		};
 
-		router.events.on("routeChangeError", (url) => {
-			setRouteChange(false);
-		});
-	}, [router]);
+		router.events.on("routeChangeStart", handleStart);
+		router.events.on("routeChangeComplete", handleComplete);
+		router.events.on("routeChangeError", handleComplete);
+
+		return () => {
+			router.events.off("routeChangeStart", handleStart);
+			router.events.off("routeChangeComplete", handleComplete);
+			router.events.off("routeChangeError", handleComplete);
+		};
+	}, [router.events]);
 
 	useEffect(() => {
 		if (loaded) {
