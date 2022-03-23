@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import Image from "next/image";
+import AppContext from "../App/AppContext";
 import styles from "./Loader.module.scss";
 
-const Loader = ({ routeChange, loading }) => {
+const Loader = () => {
+	const appData = useContext(AppContext);
+
 	return (
 		<div
 			className={`${styles.loader} ${
-				loading || routeChange ? styles.loading : ""
+				// appData.loading || appData.routeChange || appData.demoLoading
+				appData.demoLoading ? styles.loading : ""
 			}`}
 		>
 			<div className={styles.loaderIcon}>
@@ -16,6 +21,7 @@ const Loader = ({ routeChange, loading }) => {
 							width={96}
 							height={92}
 							alt=""
+							priority
 						/>
 					</div>
 				</div>
@@ -26,6 +32,7 @@ const Loader = ({ routeChange, loading }) => {
 							width={72}
 							height={95}
 							alt=""
+							priority
 						/>
 					</div>
 				</div>
@@ -36,6 +43,7 @@ const Loader = ({ routeChange, loading }) => {
 							width={86}
 							height={92}
 							alt=""
+							priority
 						/>
 					</div>
 				</div>
@@ -46,6 +54,7 @@ const Loader = ({ routeChange, loading }) => {
 							width={57}
 							height={92}
 							alt=""
+							priority
 						/>
 					</div>
 				</div>

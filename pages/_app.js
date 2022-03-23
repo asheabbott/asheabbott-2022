@@ -10,6 +10,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 library.add(far, fas, fab);
 
+import AppContext from "../components/components/App/AppContext";
+
 import Loader from "../components/components/Loader/Loader";
 
 import "../styles/accessibility.scss";
@@ -28,6 +30,8 @@ const MyApp = ({ Component, pageProps }) => {
 	const [routeChange, setRouteChange] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [loaded, setLoaded] = useState(false);
+	const [demoLoading, setDemoLoading] = useState(false);
+	const [demoLoaded, setDemoLoaded] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener("load", handleLoaded);
@@ -61,15 +65,33 @@ const MyApp = ({ Component, pageProps }) => {
 		}
 	}, [loaded]);
 
+	useEffect(() => {
+		console.log(demoLoading);
+	}, [demoLoading]);
+
+	// useEffect(() => {
+	// 	if (demoLoaded) {
+	// 		setDemoLoading(false);
+	// 	}
+	// }, [demoLoaded]);
+
 	const handleLoaded = () => {
 		setLoaded(true);
 	};
 
 	return (
-		<>
-			<Loader loading={loading} routeChange={routeChange} />
+		<AppContext.Provider
+			value={{
+				routeChange,
+				loading,
+				demoLoading,
+				setDemoLoading,
+				setDemoLoaded,
+			}}
+		>
+			<Loader />
 			<Component {...pageProps} />
-		</>
+		</AppContext.Provider>
 	);
 };
 
