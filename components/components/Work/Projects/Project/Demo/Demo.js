@@ -1,12 +1,16 @@
-import { useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppContext from "../../../../App/AppContext";
 
 const Demo = ({ project }) => {
 	const appData = useContext(AppContext);
 
 	useEffect(() => {
-		appData.setDemoLoading(true);
-	}, [appData]);
+		if (!appData.demoLoaded) {
+			appData.setDemoLoading(true);
+		}
+
+		// This isn't right. 
+	});
 
 	return (
 		<section className="website-demo">
@@ -24,8 +28,6 @@ const Demo = ({ project }) => {
 						allowFullScreen
 						title="Website demo of <?php echo get_the_title(); ?>"
 						onLoad={() => {
-							console.log("demo loaded");
-							// appData.setDemoLoading(false);
 							appData.setDemoLoaded(true);
 						}}
 					></iframe>

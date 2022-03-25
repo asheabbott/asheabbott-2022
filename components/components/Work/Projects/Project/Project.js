@@ -1,5 +1,7 @@
+import { useEffect, useContext } from "react";
 // import Head from "next/head";
 
+// import AppContext from "../../../App/AppContext";
 import projectsDB from "../projectsDB";
 
 // import Header from "../../../../lib/Header/Header";
@@ -21,7 +23,14 @@ const Project = ({ id }) => {
 		keywords: "",
 	};
 
+	// const appData = useContext(AppContext);
+
 	const project = projectsDB.find((project) => project.id === id);
+
+	// useEffect(() => {
+	// 	appData.setDemoLoading(true);
+	// 	// console.log("demo loading");
+	// });
 
 	return (
 		<div className={styles.project}>

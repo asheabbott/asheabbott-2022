@@ -8,10 +8,11 @@ const Loader = () => {
 
 	return (
 		<div
-			className={`${styles.loader} ${
-				// appData.loading || appData.routeChange || appData.demoLoading
-				appData.demoLoading ? styles.loading : ""
-			}`}
+			className={`${styles.loader}`}
+			// className={`${styles.loader} ${
+			// 	// appData.windowLoading || appData.routeChanging || appData.demoLoading
+			// 	appData.demoLoading ? styles.loading : ""
+			// }`}
 		>
 			<div className={styles.loaderIcon}>
 				<div className={styles.letterA}>
