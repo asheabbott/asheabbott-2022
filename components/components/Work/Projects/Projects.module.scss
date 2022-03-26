@@ -1,8 +1,8 @@
 @import "../../../../styles/variables.scss";
 
 .projects {
-  & > div > .flex {
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+	& > div > .flex {
+		flex-wrap: wrap;
+		margin: -15px;
+	}
 }

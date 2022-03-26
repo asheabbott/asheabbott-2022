@@ -1,17 +1,11 @@
-import { useEffect, useContext } from "react";
-// import Head from "next/head";
-
-// import AppContext from "../../../App/AppContext";
 import projectsDB from "../projectsDB";
 
-// import Header from "../../../../lib/Header/Header";
 import Page from "../../../../lib/Page/Page";
 import PageHeader from "../../../../lib/PageHeader/PageHeader";
 import Demo from "./Demo/Demo";
 import Details from "./Details/Details";
 import Samples from "./Samples/Samples";
 import Nav from "./Nav/Nav";
-// import Footer from "../../../../lib/Footer/Footer";
 
 import styles from "./Project.module.scss";
 
@@ -23,14 +17,7 @@ const Project = ({ id }) => {
 		keywords: "",
 	};
 
-	// const appData = useContext(AppContext);
-
 	const project = projectsDB.find((project) => project.id === id);
-
-	// useEffect(() => {
-	// 	appData.setDemoLoading(true);
-	// 	// console.log("demo loading");
-	// });
 
 	return (
 		<div className={styles.project}>

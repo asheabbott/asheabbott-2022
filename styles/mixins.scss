@@ -1,17 +1,17 @@
 @import "../styles/variables.scss";
 
 @mixin container {
-  width: 100%;
-  max-width: $content-max;
-  margin: 0 auto;
-  padding: 0 30px;
-  box-sizing: border-box;
+	width: 100%;
+	max-width: $content-max;
+	margin: 0 auto;
+	padding: 0 30px;
+	box-sizing: border-box;
 
-  @media #{$break-sm-square-up} {
-    padding: 0 50px;
-  }
+	@media #{$break-sm-square-up} {
+		padding: 0 50px;
+	}
 
-  @media #{$break-md-up} {
-    padding: 0 65px;
-  }
+	@media #{$break-md-up} {
+		padding: 0 65px;
+	}
 }

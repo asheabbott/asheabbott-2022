@@ -52,7 +52,7 @@ const Bio = () => {
 							className="button"
 							text="Download my Resume"
 							href="/files/resume-ashe-abbott-diblasi.pdf"
-              external={true}
+							external={true}
 						/>
 					</div>
 				</div>

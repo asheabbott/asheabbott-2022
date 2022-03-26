@@ -1,24 +1,19 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import AppContext from "../../../../App/AppContext";
 
 const Demo = ({ project }) => {
 	const appData = useContext(AppContext);
 
 	useEffect(() => {
-		if (!appData.demoLoaded) {
-			appData.setDemoLoading(true);
-		}
+		appData.setVideo(true);
 
-		// This isn't right. 
-	});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<section className="website-demo">
 			<div className="container">
-				<div
-					className="video"
-					// style={{ backgroundColor: project.video.color || "#fff" }}
-				>
+				<div className="video" style={{ backgroundColor: project.video.color }}>
 					<iframe
 						src={`https://player.vimeo.com/video/${project.video.number}?background=1`}
 						width="640"
@@ -26,9 +21,9 @@ const Demo = ({ project }) => {
 						frameBorder="0"
 						allow="autoplay; fullscreen; picture-in-picture"
 						allowFullScreen
-						title="Website demo of <?php echo get_the_title(); ?>"
+						title={`Website demo of ${project.name}`}
 						onLoad={() => {
-							appData.setDemoLoaded(true);
+							appData.setVideoLoaded(true);
 						}}
 					></iframe>
 				</div>

@@ -7,9 +7,7 @@ const PageHeader = ({ project = false, title }) => {
 
 	return (
 		<header
-			className={`${styles.pageHeader} ${
-				project ? styles.projectHeader : ""
-			}`}
+			className={`${styles.pageHeader} ${project ? styles.projectHeader : ""}`}
 			style={{ paddingTop: pageData.topSpace }}
 		>
 			<div className="container">

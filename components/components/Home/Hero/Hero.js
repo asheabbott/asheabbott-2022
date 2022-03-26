@@ -1,6 +1,16 @@
+import { useContext, useEffect } from "react";
+import AppContext from "../../App/AppContext";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
+	const appData = useContext(AppContext);
+
+	useEffect(() => {
+		appData.setVideo(true);
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	return (
 		<section className={styles.hero}>
 			<div className={styles.heroText}>
@@ -24,6 +34,9 @@ const Hero = () => {
 							allow="autoplay; fullscreen; picture-in-picture"
 							allowFullScreen
 							title="Work Samples"
+							onLoad={() => {
+								appData.setVideoLoaded(true);
+							}}
 						></iframe>
 					</div>
 				</div>

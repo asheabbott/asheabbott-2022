@@ -1,8 +1,5 @@
 const imgPath = "/images/projects";
-
 const beyondDefinition = "Beyond Definition (formerly Bates Creative)";
-
-// TO DO: 301 redirects from /projects/project-name to /work/project-name
 
 const projectsDB = [
 	{
@@ -37,7 +34,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687724",
-			color: "",
+			color: "#52fe9e",
 		},
 		thumbnail: `${imgPath}/transurban/transurban-thumbnail.jpg`,
 		screenshots: [
@@ -83,7 +80,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687772",
-			color: "#1c1411",
+			color: "#ea5a24",
 		},
 		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
 		screenshots: [
@@ -168,7 +165,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687804",
-			color: "",
+			color: "#ff4646",
 		},
 		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.jpg`,
 		screenshots: [
@@ -213,7 +210,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687826",
-			color: "",
+			color: "#009cde",
 		},
 		thumbnail: `${imgPath}/aria/aria-thumbnail.jpg`,
 		screenshots: [
@@ -262,7 +259,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "372482869",
-			color: "",
+			color: "#b5121b",
 		},
 		thumbnail: `${imgPath}/moaa/moaa-thumbnail.jpg`,
 		screenshots: [
@@ -299,7 +296,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687847",
-			color: "",
+			color: "#ffbd23",
 		},
 		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.jpg`,
 		screenshots: [
@@ -337,7 +334,7 @@ const projectsDB = [
 		agency: beyondDefinition,
 		video: {
 			number: "363687856",
-			color: "",
+			color: "#cad532",
 		},
 		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.jpg`,
 		screenshots: [

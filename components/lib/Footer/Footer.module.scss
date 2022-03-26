@@ -1,138 +1,137 @@
-@use "sass:math";
 @import "../../../styles/variables.scss";
 
 .siteFooter {
-  width: calc(100% - 40px);
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  padding: 0 15px;
-  mix-blend-mode: difference;
-  transition: transform $transition-speed $transition-easing;
-  z-index: 999;
+	width: calc(100% - 40px);
+	position: fixed;
+	bottom: 20px;
+	left: 0;
+	padding: 0 15px;
+	mix-blend-mode: difference;
+	transition: transform $transition-speed $transition-easing;
+	z-index: 999;
 
-  @media #{$break-sm-square-up} {
-    width: calc(100% - 60px);
-    bottom: 30px;
-    padding: 0 30px;
-  }
+	@media #{$break-sm-square-up} {
+		width: calc(100% - 60px);
+		bottom: 30px;
+		padding: 0 30px;
+	}
 
-  @media #{$break-md-up} {
-    width: calc(100% - 100px);
-    bottom: 40px;
-    padding: 0 50px;
-  }
+	@media #{$break-md-up} {
+		width: calc(100% - 100px);
+		bottom: 40px;
+		padding: 0 50px;
+	}
 
-  & > .flex {
-    align-items: flex-end;
+	& > .flex {
+		align-items: flex-end;
 
-    a {
-      display: block;
-      color: $white;
-      text-decoration: none;
-    }
-  
-    .text {
-      .email {
-        font-weight: $font-weight-medium;
-        font-size: $font-size-body-xs;
-        transition: color $transition-speed $transition-easing;
+		a {
+			display: block;
+			color: $white;
+			text-decoration: none;
+		}
 
-        &:hover {
-          color: $green;
-        }
-      }
+		.text {
+			.email {
+				font-weight: $font-weight-medium;
+				font-size: $font-size-body-xs;
+				transition: color $transition-speed $transition-easing;
 
-      .copyright {
-        margin: 8px 0 0 0;
-        font-size: 12px;
-        color: $white;
-      }
-    }
-  
-    .social {
-      margin-left: auto;
+				&:hover {
+					color: $green;
+				}
+			}
 
-      & > .flex {
-        max-width: 140px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        margin: -5px -8px;
+			.copyright {
+				margin: 8px 0 0 0;
+				font-size: 12px;
+				color: $white;
+			}
+		}
 
-        @media #{$break-sm-up} {
-          flex-direction: row;
-        }
+		.social {
+			margin-left: auto;
 
-        a {
-          padding: 5px 8px;
-          transition: color $transition-speed $transition-easing;
+			& > .flex {
+				max-width: 140px;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: flex-end;
+				margin: -5px -8px;
 
-          @media #{$break-sm-up} {
-            display: inline-block;
-          }
+				@media #{$break-sm-up} {
+					flex-direction: row;
+				}
 
-          &:hover {
-            color: $green;
-          }
-  
-          svg {
-            font-size: 30px;
-          }
-        }
+				a {
+					padding: 5px 8px;
+					transition: color $transition-speed $transition-easing;
 
-        @media #{$break-sm-up} {
-          max-width: none;
-          flex-wrap: nowrap;
-          margin: -12px;
+					@media #{$break-sm-up} {
+						display: inline-block;
+					}
 
-          a {
-            padding: 12px;
-          }
-        }
-      }
-    }
-  }
+					&:hover {
+						color: $green;
+					}
+
+					svg {
+						font-size: 30px;
+					}
+				}
+
+				@media #{$break-sm-up} {
+					max-width: none;
+					flex-wrap: nowrap;
+					margin: -12px;
+
+					a {
+						padding: 12px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media #{$break-sm-down} {
-  // TO DO
-  .mobile.landscape {
-    .siteFooter {
-      width: calc(100% - 40px);
-      bottom: 20px;
-      padding: 0 20px;
-  
-      .container {
-        & > .flex {
-          flex-direction: row;
-          align-items: center;
-  
-          .email {
-            margin-bottom: 0;
-          }
-  
-          .social {
-            margin-left: auto;
-  
-            & > .flex {
-              margin: -10px;
-  
-              a {
-                padding: 10px;
-        
-                svg {
-                  font-size: 30px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }     
+	// TO DO
+	.mobile.landscape {
+		.siteFooter {
+			width: calc(100% - 40px);
+			bottom: 20px;
+			padding: 0 20px;
+
+			.container {
+				& > .flex {
+					flex-direction: row;
+					align-items: center;
+
+					.email {
+						margin-bottom: 0;
+					}
+
+					.social {
+						margin-left: auto;
+
+						& > .flex {
+							margin: -10px;
+
+							a {
+								padding: 10px;
+
+								svg {
+									font-size: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .footerBuffer {
-  background-color: $black;
+	background-color: $black;
 }

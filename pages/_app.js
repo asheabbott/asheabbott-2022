@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -30,14 +30,17 @@ const MyApp = ({ Component, pageProps }) => {
 	const [windowLoaded, setWindowLoaded] = useState(false);
 	const [routeChanging, setRouteChanging] = useState(false);
 	const [routeChanged, setRouteChanged] = useState(false);
-	const [demoLoading, setDemoLoading] = useState(false);
-	const [demoLoaded, setDemoLoaded] = useState(false);
+	const [video, setVideo] = useState(false);
+	const [videoLoading, setVideoLoading] = useState(false);
+	const [videoLoaded, setVideoLoaded] = useState(false);
 
 	const [loading, setLoading] = useState(true);
 	const [loaded, setLoaded] = useState(false);
 
 	const router = useRouter();
 
+	// Loader logic
+	// Window load
 	useEffect(() => {
 		const handleWindowLoaded = () => {
 			setWindowLoaded(true);
@@ -50,16 +53,31 @@ const MyApp = ({ Component, pageProps }) => {
 	useEffect(() => {
 		if (windowLoaded) {
 			setWindowLoading(false);
-			document.querySelector("body").classList.add("loaded");
 
-			console.log("window loaded");
+			if (video) {
+				if (videoLoaded) {
+					setLoading(false);
+					setLoaded(true);
+				}
+			} else {
+				setLoading(false);
+				setLoaded(true);
+			}
+
+			document.querySelector("body").classList.add("loaded");
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [windowLoaded]);
 
+	// Route change
 	useEffect(() => {
 		const handleStart = (url) => {
 			setRouteChanging(true);
 			setRouteChanged(false);
+			setVideo(false);
+			setLoading(true);
+			setLoaded(false);
 		};
 
 		const handleComplete = (url) => {
@@ -80,40 +98,46 @@ const MyApp = ({ Component, pageProps }) => {
 
 	useEffect(() => {
 		if (routeChanged) {
-			console.log("route changed");
+			if (video) {
+				if (videoLoaded) {
+					setLoading(false);
+					setLoaded(true);
+				}
+			} else {
+				setLoading(false);
+				setLoaded(true);
+			}
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [routeChanged]);
 
-	// Load and route change are working; demo load is unreliable currently.
+	// Video load
+	useEffect(() => {
+		if (video) {
+			setVideoLoading(true);
+		}
+	}, [video]);
 
 	useEffect(() => {
-		if (demoLoading) {
-			console.log("demo loading");
+		if (videoLoaded) {
+			setVideoLoading(false);
+
+			if (windowLoaded || routeChanged) {
+				setLoading(false);
+				setLoaded(true);
+			}
 		}
 
-		console.log(`Demo loading: ${demoLoading}`);
-		console.log(`Demo loaded: ${demoLoaded}`);
-	}, [demoLoading]);
-
-	useEffect(() => {
-		if (demoLoaded) {
-			setDemoLoading(false);
-			console.log("demo loaded");
-		}
-
-		console.log(`Demo loading: ${demoLoading}`);
-		console.log(`Demo loaded: ${demoLoaded}`);
-	}, [demoLoaded]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [videoLoaded]);
 
 	return (
 		<AppContext.Provider
 			value={{
-				// routeChanging,
-				// windowLoading,
-				// // setDemo,
-				// demoLoading,
-				setDemoLoading,
-				setDemoLoaded,
+				setVideo,
+				setVideoLoaded,
+				loading,
 			}}
 		>
 			<Loader />
