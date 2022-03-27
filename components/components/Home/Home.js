@@ -6,8 +6,7 @@ import styles from "./Home.module.scss";
 
 const Home = () => {
 	const meta = {
-		// TO DO
-		title: "Ashe Abbott DiBlasi",
+		title: "Home",
 		description: "",
 		keywords: "",
 	};

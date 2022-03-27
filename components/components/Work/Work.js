@@ -8,8 +8,7 @@ import styles from "./Work.module.scss";
 
 const Work = () => {
 	const meta = {
-		// TO DO
-		title: "Ashe Abbott DiBlasi",
+		title: "Work",
 		description: "",
 		keywords: "",
 	};

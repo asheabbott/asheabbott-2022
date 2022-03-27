@@ -21,7 +21,7 @@ const Main = ({ children }) => {
 	};
 
 	return (
-		<main ref={mainRef} style={dynamicStyles.main}>
+		<main id="main" ref={mainRef} style={dynamicStyles.main}>
 			{children}
 		</main>
 	);

@@ -34,7 +34,6 @@
 }
 
 @media #{$break-sm-square-down} {
-	// TO DO
 	.mobile.landscape {
 		.mainNavigation {
 			.mainMenu {
@@ -49,13 +48,13 @@
 						flex-wrap: wrap;
 						margin: -15px;
 
-						// li {
-						// 	margin: 15px;
+						li {
+							margin: 15px;
 
-						// 	a {
-						// 		font-size: 41px;
-						// 	}
-						// }
+							a {
+								font-size: 41px;
+							}
+						}
 					}
 				}
 			}

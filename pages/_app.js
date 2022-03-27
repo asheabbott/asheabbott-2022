@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
+import "focus-visible";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
@@ -12,6 +14,7 @@ library.add(far, fas, fab);
 
 import AppContext from "../components/components/App/AppContext";
 
+import * as gtag from "../components/lib/GoogleAnalytics/gtag";
 import Loader from "../components/components/Loader/Loader";
 
 import "../styles/accessibility.scss";
@@ -38,6 +41,14 @@ const MyApp = ({ Component, pageProps }) => {
 	const [loaded, setLoaded] = useState(false);
 
 	const router = useRouter();
+
+	const currentDevice = async () => {
+		await import("current-device");
+	};
+
+	useEffect(() => {
+		currentDevice();
+	}, []);
 
 	// Loader logic
 	// Window load
@@ -83,6 +94,7 @@ const MyApp = ({ Component, pageProps }) => {
 		const handleComplete = (url) => {
 			setRouteChanging(false);
 			setRouteChanged(true);
+			gtag.pageview(url);
 		};
 
 		router.events.on("routeChangeStart", handleStart);
@@ -140,6 +152,24 @@ const MyApp = ({ Component, pageProps }) => {
 				loading,
 			}}
 		>
+			<Script
+				strategy="afterInteractive"
+				src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+			/>
+			<Script
+				id="gtag-init"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+				}}
+			/>
 			<Loader />
 			<Component {...pageProps} />
 		</AppContext.Provider>

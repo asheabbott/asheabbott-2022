@@ -34,6 +34,9 @@ const Page = ({ meta, home = false, children }) => {
 		setScrollTop(document.body.scrollTop || document.documentElement.scrollTop);
 	};
 
+	const metaDescription =
+		"Ashe Abbott DiBlasi has been bringing websites to life for more than 15 years, contributing to all phases of the website life cycle — like discovery, strategy, UX, design and development. While she enjoys all aspects of making websites, she really loves to code.";
+
 	return (
 		<PageContext.Provider
 			value={{
@@ -57,8 +60,11 @@ const Page = ({ meta, home = false, children }) => {
 			}}
 		>
 			<Head>
-				<title>{meta.title}</title>
-				<meta name="description" content={meta.description} />
+				<title>
+					{meta.title} - Ashe Abbott DiBlasi: Senior Designer &amp; Front-End
+					Web Developer
+				</title>
+				<meta name="description" content={metaDescription} />
 				<meta name="keywords" content={meta.keywords} />
 			</Head>
 

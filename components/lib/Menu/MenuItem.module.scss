@@ -19,6 +19,12 @@
 		&:hover {
 			color: $blue;
 		}
+
+		&:focus-visible {
+			box-shadow: none;
+			background-color: $blue;
+			color: $white !important;
+		}
 	}
 
 	&.currentMenuItem {

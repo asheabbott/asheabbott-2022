@@ -7,8 +7,7 @@ import styles from "./About.module.scss";
 
 const About = () => {
 	const meta = {
-		// TO DO
-		title: "Ashe Abbott DiBlasi",
+		title: "About",
 		description: "",
 		keywords: "",
 	};
