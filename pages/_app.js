@@ -48,6 +48,8 @@ const MyApp = ({ Component, pageProps }) => {
 
 	useEffect(() => {
 		currentDevice();
+
+		console.log("current device");
 	}, []);
 
 	// Loader logic
@@ -55,15 +57,19 @@ const MyApp = ({ Component, pageProps }) => {
 	useEffect(() => {
 		const handleWindowLoaded = () => {
 			setWindowLoaded(true);
+			console.log("setting windowLoaded to true");
 		};
+
+		console.log("in here");
 
 		window.addEventListener("load", handleWindowLoaded);
 		return () => window.removeEventListener("load", handleWindowLoaded);
-	});
+	}, []);
 
 	useEffect(() => {
 		if (windowLoaded) {
 			setWindowLoading(false);
+			console.log("window loaded");
 
 			if (video) {
 				if (videoLoaded) {
@@ -84,6 +90,8 @@ const MyApp = ({ Component, pageProps }) => {
 	// Route change
 	useEffect(() => {
 		const handleStart = (url) => {
+			console.log("route changing");
+
 			setRouteChanging(true);
 			setRouteChanged(false);
 			setVideo(false);
@@ -119,6 +127,8 @@ const MyApp = ({ Component, pageProps }) => {
 				setLoading(false);
 				setLoaded(true);
 			}
+
+			console.log("route changed");
 		}
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -143,6 +153,14 @@ const MyApp = ({ Component, pageProps }) => {
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [videoLoaded]);
+
+	useEffect(() => {
+		console.log(`Loading: ${loading}`);
+	}, [loading]);
+
+	useEffect(() => {
+		console.log(`Loaded: ${loaded}`);
+	}, [loaded]);
 
 	return (
 		<AppContext.Provider
