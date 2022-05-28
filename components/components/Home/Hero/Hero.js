@@ -18,7 +18,7 @@ const Hero = () => {
 					<div className={`${styles.heroTextInner} animate`}>
 						<h1>
 							As a web designer &amp; front-end developer, I’ve been bringing
-							websites to life for more than 15 years.
+							websites to life for more than 16 years.
 						</h1>
 					</div>
 				</div>
