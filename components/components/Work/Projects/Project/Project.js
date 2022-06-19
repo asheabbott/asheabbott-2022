@@ -9,10 +9,9 @@ import Nav from "./Nav/Nav";
 
 import styles from "./Project.module.scss";
 
-const Project = ({ id }) => {
-	const meta = {
-		// TO DO
-		title: "Ashe Abbott DiBlasi",
+const Project = ({ meta, id }) => {
+	const projectMeta = {
+		title: meta.title,
 		description: "",
 		keywords: "",
 	};
@@ -21,7 +20,7 @@ const Project = ({ id }) => {
 
 	return (
 		<div className={styles.project}>
-			<Page meta={meta}>
+			<Page meta={projectMeta}>
 				<PageHeader project={true} title={project.name} />
 				{project.video && <Demo project={project} />}
 				<Details project={project} />

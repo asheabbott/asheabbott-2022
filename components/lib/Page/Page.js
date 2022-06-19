@@ -35,7 +35,7 @@ const Page = ({ meta, home = false, children }) => {
 	};
 
 	const metaDescription =
-		"Ashe Abbott DiBlasi has been bringing websites to life for more than 15 years, contributing to all phases of the website life cycle — like discovery, strategy, UX, design and development. While she enjoys all aspects of making websites, she really loves to code.";
+		"Ashe Abbott DiBlasi has been bringing websites to life for more than 15 years, contributing to all phases of the website life cycle — like discovery, strategy, UX, design and development. While they enjoy all aspects of making websites, they really love to code.";
 
 	return (
 		<PageContext.Provider
@@ -64,7 +64,10 @@ const Page = ({ meta, home = false, children }) => {
 					{meta.title} - Ashe Abbott DiBlasi: Senior Designer &amp; Front-End
 					Web Developer
 				</title>
-				<meta name="description" content={metaDescription} />
+				<meta
+					name="description"
+					content={meta.description || metaDescription}
+				/>
 				<meta name="keywords" content={meta.keywords} />
 			</Head>
 
