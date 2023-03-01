@@ -7,11 +7,11 @@ const Preview = ({ project }) => {
 	const path = `/work/${project.slug}`;
 
 	return (
-		<div key={project.name} className={styles.preview}>
+        <div key={project.name} className={styles.preview}>
 			<div className={styles.name}>
 				<h2>
 					<Link href={path}>
-						<a>{project.name}</a>
+						{project.name}
 					</Link>
 				</h2>
 			</div>
@@ -22,12 +22,12 @@ const Preview = ({ project }) => {
 							useMediaQuery(600) ? styles.desktop : styles.mobile
 						}`}
 					>
-						<Link href={path}>
-							<a
-								style={{ backgroundImage: `url(${project.thumbnail})` }}
-								aria-label={`Navigate to ${project.name} project`}
-							></a>
-						</Link>
+						<Link
+                            href={path}
+                            style={{ backgroundImage: `url(${project.thumbnail})` }}
+                            aria-label={`Navigate to ${project.name} project`}>
+
+                        </Link>
 					</div>
 				</div>
 				<div className={styles.overview}>
@@ -46,7 +46,7 @@ const Preview = ({ project }) => {
 				</div>
 			</div>
 		</div>
-	);
+    );
 };
 
 export default Preview;

@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import ReactGA from "react-ga4";
 import "focus-visible";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-config.autoAddCss = false;
-import { far } from "@fortawesome/free-regular-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+// import { config, library } from "@fortawesome/fontawesome-svg-core";
+// import "@fortawesome/fontawesome-svg-core/styles.css";
+// config.autoAddCss = false;
+// import { far } from "@fortawesome/free-regular-svg-icons";
+// import { fas } from "@fortawesome/free-solid-svg-icons";
+// import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import AppContext from "../components/components/App/AppContext";
 
@@ -28,7 +28,7 @@ import "../styles/video.scss";
 ReactGA.initialize("G-1W8J7JFSZK");
 ReactGA.send("pageview");
 
-library.add(far, fas, fab);
+// library.add(far, fas, fab);
 
 const MyApp = ({ Component, pageProps }) => {
 	const [windowLoading, setWindowLoading] = useState(true);
