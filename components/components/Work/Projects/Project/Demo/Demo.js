@@ -15,13 +15,13 @@ const Demo = ({ project }) => {
 			<div className="container">
 				<div className="video" style={{ backgroundColor: project.video.color }}>
 					<iframe
-						src={`https://player.vimeo.com/video/${project.video.number}?background=1`}
-						width="640"
-						height="360"
-						frameBorder="0"
-						allow="autoplay; fullscreen; picture-in-picture"
-						allowFullScreen
+						width="560"
+						height="315"
+						src={`https://www.youtube.com/embed/${project.video.number}?autoplay=1&controls=0&loop=1&mute=1&playlist=${project.video.number}&rel=0`}
 						title={`Website demo of ${project.name}`}
+						frameBorder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowFullScreen
 						onLoad={() => {
 							appData.setVideoLoaded(true);
 						}}

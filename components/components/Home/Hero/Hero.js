@@ -27,13 +27,13 @@ const Hero = () => {
 				<div className="container">
 					<div className="video" style={{ backgroundColor: "#f52d83" }}>
 						<iframe
-							src="https://player.vimeo.com/video/539800751?background=1"
-							width="640"
-							height="360"
-							frameBorder="0"
-							allow="autoplay; fullscreen; picture-in-picture"
-							allowFullScreen
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/0e_Oouy_wCE?autoplay=1&controls=0&loop=1&mute=1&playlist=0e_Oouy_wCE&rel=0"
 							title="Work Samples"
+							frameBorder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
 							onLoad={() => {
 								appData.setVideoLoaded(true);
 							}}
