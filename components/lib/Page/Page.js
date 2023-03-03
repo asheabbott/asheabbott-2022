@@ -39,7 +39,7 @@ const Page = ({ meta, home = false, children }) => {
 	const metaDescription =
 		"Ashe Abbott DiBlasi is a designer & front-end web developer. They’ve been creating websites for more than 17 years, contributing to all phases of the website life cycle — like discovery, strategy, user experience, design and development.";
 
-	const ogImage = "/images/logos/pattern.png";
+	const ogImage = "https://asheabbott.com/images/logos/pattern.png";
 
 	return (
 		<PageContext.Provider
