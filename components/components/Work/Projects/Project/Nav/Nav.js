@@ -17,7 +17,7 @@ const Nav = () => {
 	}
 
 	return (
-		<section className={styles.projectNavSection}>
+        <section className={styles.projectNavSection}>
 			<div className="container">
 				<h2>Projects</h2>
 			</div>
@@ -27,22 +27,22 @@ const Nav = () => {
 						const path = `/work/${project.slug}`;
 
 						return (
-							<div key={project.id} className={styles.project}>
+                            <div key={project.id} className={styles.project}>
 								<div className={`${styles.projectInner} ${styles.thumbClass}`}>
-									<Link href={path}>
-										<a
-											style={{ backgroundImage: `url(${project.thumbnail})` }}
-											aria-label={`Navigate to ${project.name} project`}
-										></a>
-									</Link>
+									<Link
+                                        href={path}
+                                        style={{ backgroundImage: `url(${project.thumbnail})` }}
+                                        aria-label={`Navigate to ${project.name} project`}>
+
+                                    </Link>
 								</div>
 							</div>
-						);
+                        );
 					})}
 				</div>
 			</div>
 		</section>
-	);
+    );
 };
 
 export default Nav;

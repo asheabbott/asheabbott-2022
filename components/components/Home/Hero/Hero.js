@@ -17,8 +17,8 @@ const Hero = () => {
 				<div className="container">
 					<div className={`${styles.heroTextInner} animate`}>
 						<h1>
-							As a web designer &amp; front-end developer, I’ve been bringing
-							websites to life for more than 16 years.
+							I’m a designer &amp; front-end web developer. I’ve been creating
+							websites for more than 17 years.
 						</h1>
 					</div>
 				</div>
@@ -27,13 +27,13 @@ const Hero = () => {
 				<div className="container">
 					<div className="video" style={{ backgroundColor: "#f52d83" }}>
 						<iframe
-							src="https://player.vimeo.com/video/539800751?background=1"
-							width="640"
-							height="360"
-							frameBorder="0"
-							allow="autoplay; fullscreen; picture-in-picture"
-							allowFullScreen
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/0e_Oouy_wCE?autoplay=1&controls=0&loop=1&mute=1&playlist=0e_Oouy_wCE&rel=0"
 							title="Work Samples"
+							frameBorder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
 							onLoad={() => {
 								appData.setVideoLoaded(true);
 							}}

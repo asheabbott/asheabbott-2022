@@ -33,7 +33,7 @@ const projectsDB = [
 		awards: ["Communicator Awards, Award of Distinction"],
 		agency: beyondDefinition,
 		video: {
-			number: "363687724",
+			number: "r2X9ONpdsDs",
 			color: "#52fe9e",
 		},
 		thumbnail: `${imgPath}/transurban/transurban-thumbnail.jpg`,
@@ -79,7 +79,7 @@ const projectsDB = [
 		],
 		agency: beyondDefinition,
 		video: {
-			number: "363687772",
+			number: "WdNTsMtcNgc",
 			color: "#ea5a24",
 		},
 		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
@@ -164,7 +164,7 @@ const projectsDB = [
 		awards: null,
 		agency: beyondDefinition,
 		video: {
-			number: "363687804",
+			number: "U_71M5bLhKU",
 			color: "#ff4646",
 		},
 		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.jpg`,
@@ -186,16 +186,10 @@ const projectsDB = [
 	{
 		id: 5,
 		name: "American Risk and Insurance Association’s Website",
-		slug: "american-risk-and-insurance-associations-website",
+		slug: "american-risk-and-insurance-association-website",
 		description:
 			"The American Risk and Insurance Association (ARIA) works to study and promote the knowledge of risk management and insurance. They have “a long tradition of supporting and educating professionals, scholars, and students in the insurance and risk management industry.” ARIA needed a new website that would successfully present their updated brand, educate visitors about the organization, showcase articles from their two Wiley Online Library-hosted journals and offer event information and archives in a user-friendly manner. The project team created an inviting and informative website that is easy for both visitors and authors to use.",
-		buttons: [
-			{
-				text: "Visit Website",
-				url: "http://www.aria.org",
-				external: true,
-			},
-		],
+		buttons: [],
 		technical: "WordPress Website",
 		contributions: [
 			"Website Strategy",
@@ -209,7 +203,7 @@ const projectsDB = [
 		awards: null,
 		agency: beyondDefinition,
 		video: {
-			number: "363687826",
+			number: "-ObWbgQTSmY",
 			color: "#009cde",
 		},
 		thumbnail: `${imgPath}/aria/aria-thumbnail.jpg`,
@@ -258,7 +252,7 @@ const projectsDB = [
 		awards: ["Communicator Awards, Award of Excellence"],
 		agency: beyondDefinition,
 		video: {
-			number: "372482869",
+			number: "SxbZiTAH9-o",
 			color: "#b5121b",
 		},
 		thumbnail: `${imgPath}/moaa/moaa-thumbnail.jpg`,
@@ -283,19 +277,13 @@ const projectsDB = [
 		slug: "unisys-linesight-product-information-web-experience",
 		description:
 			"Unisys is a global information technology company that provides world-renowned software, services and technology. Unisys needed a sales demo for their Linesight product that would be interesting, interactive and informative. The project team created a tablet-focused product information web experience with friendly illustrations and extensive jQuery.",
-		buttons: [
-			{
-				text: "Visit Website",
-				url: "https://www.unisys.com/linesight-demo",
-				external: true,
-			},
-		],
+		buttons: [],
 		technical: "Static Website",
 		contributions: ["Front-End Development"],
 		awards: null,
 		agency: beyondDefinition,
 		video: {
-			number: "363687847",
+			number: "7pO60Y7Rvzs",
 			color: "#ffbd23",
 		},
 		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.jpg`,
@@ -333,7 +321,7 @@ const projectsDB = [
 		awards: ["W3 Awards, Silver", "AIGA 50"],
 		agency: beyondDefinition,
 		video: {
-			number: "363687856",
+			number: "MlG9kjSfT_I",
 			color: "#cad532",
 		},
 		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.jpg`,

@@ -2,42 +2,44 @@ const significantSkills = [
 	{
 		title: "Significant Experience",
 		description:
-			"Things I do regularly, have likely done for a long time and know well.",
+			"Things I do regularly or have done for a long time and know well.",
 		skillGroups: [
 			{
 				group: "Expertise",
 				skills: [
-					"Website Strategy",
+					"Front-End Development",
 					"User Experience Design",
 					"Website Design",
-					"Front-End Development",
+					"Website Strategy",
 					"WordPress Development",
 				],
-			},
-			{
-				group: "Code",
-				skills: ["HTML5", "CSS3", "Sass", "JavaScript ES5", "jQuery"],
-			},
-			{
-				group: "Code Editors",
-				skills: ["Visual Studio Code"],
 			},
 			{
 				group: "CMS Platforms",
 				skills: ["WordPress"],
 			},
 			{
-				group: "Tools",
+				group: "Code",
 				skills: [
-					"Google DevTools",
-					"Google Lighthouse",
-					"BrowserStack",
-					"MAMP",
+					"CSS3",
+					"HTML5",
+					"JavaScript (ES5, ES6)",
+					"jQuery",
+					"React",
+					"Sass",
 				],
 			},
 			{
+				group: "Code Editors",
+				skills: ["Visual Studio Code"],
+			},
+			{
 				group: "Software",
-				skills: ["Adobe XD", "Adobe Illustrator"],
+				skills: ["Adobe Illustrator", "Adobe XD", "Affinity Designer"],
+			},
+			{
+				group: "Tools",
+				skills: ["Google DevTools", "Google Lighthouse", "MAMP"],
 			},
 		],
 	},
@@ -52,37 +54,32 @@ const moderateSkills = [
 			{
 				group: "Expertise",
 				skills: [
-					"Information Architecture",
-					"Website Accessibility",
 					"App Design",
 					"Email Design",
 					"Email Development",
-					"Twixl Development",
-					"HubSpot Development",
+					"Information Architecture",
+					"Website Accessibility",
 				],
 			},
 			{
 				group: "Code",
 				skills: [
-					"JavaScript ES6",
-					"React",
-					"Gulp",
 					"Bootstrap",
 					"Git",
 					"GitHub",
+					"GitLab",
+					"Gulp",
+					"Meteor",
+					"Next.js",
 				],
 			},
 			{
-				group: "Code Editors",
-				skills: ["Sublime Text 3"],
-			},
-			{
-				group: "Services",
-				skills: ["Twixl", "Mailchimp", "HubSpot"],
-			},
-			{
 				group: "Software",
-				skills: ["Adobe Photoshop"],
+				skills: ["Adobe Photoshop", "Affinity Photo"],
+			},
+			{
+				group: "Tools",
+				skills: ["BrowserStack", "Jira"],
 			},
 		],
 	},
@@ -95,30 +92,27 @@ const limitedSkills = [
 		skillGroups: [
 			{
 				group: "Expertise",
-				skills: ["Usability Testing"],
-			},
-			{
-				group: "Code",
 				skills: [
-					"React Native",
-					"Redux",
-					"Webpack",
-					"Babel",
-					"GitLab",
-					"Meteor",
+					"HubSpot Development",
+					"Twixl Development",
+					"Usability Testing",
 				],
 			},
 			{
-				group: "Code Editors",
-				skills: ["Atom"],
+				group: "Code",
+				skills: ["Babel", "React Native", "Redux", "Webpack"],
 			},
 			{
-				group: "Tools",
-				skills: ["Jira"],
+				group: "Code Editors",
+				skills: ["Atom", "Sublime Text 3"],
+			},
+			{
+				group: "Services",
+				skills: ["HubSpot", "Mailchimp", "Twixl"],
 			},
 			{
 				group: "Software",
-				skills: ["Sketch", "GIMP"],
+				skills: ["GIMP", "Sketch"],
 			},
 		],
 	},

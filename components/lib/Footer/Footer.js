@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub, faDev, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 import PageContext from "../Page/PageContext";
 import styles from "./Footer.module.scss";
 
@@ -68,7 +69,7 @@ const Footer = () => {
 									rel="noreferrer"
 									aria-label="Visit Ashe's LinkedIn"
 								>
-									<FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+									<FontAwesomeIcon icon={faLinkedinIn} />
 								</a>
 
 								<a
@@ -77,7 +78,7 @@ const Footer = () => {
 									rel="noreferrer"
 									aria-label="Visit Ashe's GitHub"
 								>
-									<FontAwesomeIcon icon={["fab", "github"]} />
+									<FontAwesomeIcon icon={faGithub} />
 								</a>
 							</div>
 							<div className={styles.row}>
@@ -87,7 +88,7 @@ const Footer = () => {
 									rel="noreferrer"
 									aria-label="Visit Ashe's DEV Community page"
 								>
-									<FontAwesomeIcon icon={["fab", "dev"]} />
+									<FontAwesomeIcon icon={faDev} />
 								</a>
 
 								<a
@@ -96,7 +97,7 @@ const Footer = () => {
 									rel="noreferrer"
 									aria-label="Visit Ashe's Stack Overflow"
 								>
-									<FontAwesomeIcon icon={["fab", "stack-overflow"]} />
+									<FontAwesomeIcon icon={faStackOverflow} />
 								</a>
 							</div>
 						</div>
