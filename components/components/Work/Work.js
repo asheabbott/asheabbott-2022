@@ -10,6 +10,7 @@ const Work = () => {
 	const meta = {
 		title: "Work",
 		description: "",
+		image: "",
 		keywords: "",
 	};
 

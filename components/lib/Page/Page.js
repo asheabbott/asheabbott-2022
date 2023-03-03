@@ -34,10 +34,12 @@ const Page = ({ meta, home = false, children }) => {
 		setScrollTop(document.body.scrollTop || document.documentElement.scrollTop);
 	};
 
-	const metaDescription =
-		"Ashe Abbott DiBlasi has been bringing websites to life for more than 15 years, contributing to all phases of the website life cycle — like discovery, strategy, UX, design and development. While they enjoy all aspects of making websites, they really love to code.";
+	const metaTitle = `${meta.title} - Ashe Abbott DiBlasi: Senior Designer & Front-End Web Developer`;
 
-	const metaTitle = `${meta.title} - Ashe Abbott DiBlasi: Senior Designer &amp; Front-End Web Developer`;
+	const metaDescription =
+		"Ashe Abbott DiBlasi is a designer & front-end web developer. They’ve been creating websites for more than 17 years, contributing to all phases of the website life cycle — like discovery, strategy, user experience, design and development.";
+
+	const ogImage = "/images/logos/pattern.png";
 
 	return (
 		<PageContext.Provider
@@ -68,6 +70,12 @@ const Page = ({ meta, home = false, children }) => {
 					content={meta.description || metaDescription}
 				/>
 				<meta name="keywords" content={meta.keywords} />
+				<meta property="og:title" content={metaTitle} />
+				<meta
+					property="og:description"
+					content={meta.description || metaDescription}
+				/>
+				<meta property="og:image" content={ogImage} />
 			</Head>
 
 			<Header />

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useContext } from "react";
-import Head from "next/head";
 import Link from "next/link";
 
 import PageContext from "../Page/PageContext";
@@ -64,11 +63,6 @@ const Header = () => {
 
 	return (
 		<>
-			{/* <Head>
-				<meta charSet="UTF-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<link rel="icon" href="/images/icons/favicon-96x96.png" key="favicon" />
-			</Head> */}
 			<a className="skip-to-content" href="#main">
 				Skip to main content
 			</a>

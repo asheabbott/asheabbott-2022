@@ -8,6 +8,7 @@ const Home = () => {
 	const meta = {
 		title: "Home",
 		description: "",
+		image: "",
 		keywords: "",
 	};
 
