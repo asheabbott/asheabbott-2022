@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import ReactGA from "react-ga4";
 import "focus-visible";
@@ -132,6 +133,11 @@ const MyApp = ({ Component, pageProps }) => {
 				loading,
 			}}
 		>
+			<Head>
+				<meta charSet="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="icon" href="/images/icons/favicon-96x96.png" key="favicon" />
+			</Head>
 			{loading ? <Loader /> : <Component {...pageProps} />}
 		</AppContext.Provider>
 	);
