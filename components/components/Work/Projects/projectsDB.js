@@ -186,16 +186,10 @@ const projectsDB = [
 	{
 		id: 5,
 		name: "American Risk and Insurance Association’s Website",
-		slug: "american-risk-and-insurance-associations-website",
+		slug: "american-risk-and-insurance-association-website",
 		description:
 			"The American Risk and Insurance Association (ARIA) works to study and promote the knowledge of risk management and insurance. They have “a long tradition of supporting and educating professionals, scholars, and students in the insurance and risk management industry.” ARIA needed a new website that would successfully present their updated brand, educate visitors about the organization, showcase articles from their two Wiley Online Library-hosted journals and offer event information and archives in a user-friendly manner. The project team created an inviting and informative website that is easy for both visitors and authors to use.",
-		buttons: [
-			{
-				text: "Visit Website",
-				url: "http://www.aria.org",
-				external: true,
-			},
-		],
+		buttons: [],
 		technical: "WordPress Website",
 		contributions: [
 			"Website Strategy",
@@ -283,13 +277,7 @@ const projectsDB = [
 		slug: "unisys-linesight-product-information-web-experience",
 		description:
 			"Unisys is a global information technology company that provides world-renowned software, services and technology. Unisys needed a sales demo for their Linesight product that would be interesting, interactive and informative. The project team created a tablet-focused product information web experience with friendly illustrations and extensive jQuery.",
-		buttons: [
-			{
-				text: "Visit Website",
-				url: "https://www.unisys.com/linesight-demo",
-				external: true,
-			},
-		],
+		buttons: [],
 		technical: "Static Website",
 		contributions: ["Front-End Development"],
 		awards: null,
