@@ -20,12 +20,21 @@ const Page = ({ meta, home = false, children }) => {
 
 	const appData = useContext(AppContext);
 
+	const metaTitle = `${meta.title} - Ashe Abbott DiBlasi: Senior Designer & Front-End Web Developer`;
+
+	const metaDescription =
+		"Ashe Abbott DiBlasi is a designer & front-end web developer. They’ve been creating websites for more than 17 years, contributing to all phases of the website life cycle — like discovery, strategy, user experience, design and development.";
+
+	const metaImage = "https://asheabbott.com/images/logos/pattern.png";
+
+	const metaKeywords = "";
+
 	useEffect(() => {
 		appData.setPageMeta({
 			title: metaTitle,
 			description: meta.description || metaDescription,
-			image: ogImage,
-			keywords: meta.keywords,
+			image: meta.image || metaImage,
+			keywords: meta.keywords || metaKeywords,
 		});
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -46,13 +55,6 @@ const Page = ({ meta, home = false, children }) => {
 		setScroll(true);
 		setScrollTop(document.body.scrollTop || document.documentElement.scrollTop);
 	};
-
-	const metaTitle = `${meta.title} - Ashe Abbott DiBlasi: Senior Designer & Front-End Web Developer`;
-
-	const metaDescription =
-		"Ashe Abbott DiBlasi is a designer & front-end web developer. They’ve been creating websites for more than 17 years, contributing to all phases of the website life cycle — like discovery, strategy, user experience, design and development.";
-
-	const ogImage = "https://asheabbott.com/images/logos/pattern.png";
 
 	return (
 		<PageContext.Provider

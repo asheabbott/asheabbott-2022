@@ -30,9 +30,10 @@ const MyApp = ({ Component, pageProps }) => {
 	const [videoLoading, setVideoLoading] = useState(false);
 	const [videoLoaded, setVideoLoaded] = useState(false);
 	const [pageMeta, setPageMeta] = useState({
-		title: "",
-		description: "",
-		image: "",
+		title: "Ashe Abbott DiBlasi: Senior Designer & Front-End Web Developer",
+		description:
+			"Ashe Abbott DiBlasi is a designer & front-end web developer. They’ve been creating websites for more than 17 years, contributing to all phases of the website life cycle — like discovery, strategy, user experience, design and development.",
+		image: "https://asheabbott.com/images/logos/pattern.png",
 		keywords: "",
 	});
 
