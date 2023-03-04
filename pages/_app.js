@@ -23,13 +23,18 @@ ReactGA.initialize("G-1W8J7JFSZK");
 ReactGA.send("pageview");
 
 const MyApp = ({ Component, pageProps }) => {
+	const [loading, setLoading] = useState(true);
 	const [windowLoaded, setWindowLoaded] = useState(false);
 	const [routeChanged, setRouteChanged] = useState(false);
 	const [video, setVideo] = useState(false);
 	const [videoLoading, setVideoLoading] = useState(false);
 	const [videoLoaded, setVideoLoaded] = useState(false);
-
-	const [loading, setLoading] = useState(true);
+	const [pageMeta, setPageMeta] = useState({
+		title: "",
+		description: "",
+		image: "",
+		keywords: "",
+	});
 
 	const router = useRouter();
 
@@ -131,12 +136,19 @@ const MyApp = ({ Component, pageProps }) => {
 				setVideo,
 				setVideoLoaded,
 				loading,
+				setPageMeta,
 			}}
 		>
 			<Head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="icon" href="/images/icons/favicon-96x96.png" key="favicon" />
+				<title>{pageMeta.title}</title>
+				<meta name="description" content={pageMeta.description} />
+				<meta name="keywords" content={pageMeta.keywords} />
+				<meta property="og:title" content={pageMeta.title} />
+				<meta property="og:description" content={pageMeta.description} />
+				<meta property="og:image" content={pageMeta.image} />
 			</Head>
 			{loading ? <Loader /> : <Component {...pageProps} />}
 		</AppContext.Provider>

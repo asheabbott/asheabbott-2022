@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useContext, useEffect, useState } from "react";
 
+import AppContext from "../../components/App/AppContext";
 import PageContext from "./PageContext";
 
 import Header from "../Header/Header";
@@ -17,6 +17,19 @@ const Page = ({ meta, home = false, children }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [scroll, setScroll] = useState(false);
 	const [scrollTop, setScrollTop] = useState(null);
+
+	const appData = useContext(AppContext);
+
+	useEffect(() => {
+		appData.setPageMeta({
+			title: metaTitle,
+			description: meta.description || metaDescription,
+			image: ogImage,
+			keywords: meta.keywords,
+		});
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	useEffect(() => {
 		setBottomSpace(mainMargin + footerBufferHeight);
@@ -63,21 +76,6 @@ const Page = ({ meta, home = false, children }) => {
 				home,
 			}}
 		>
-			<Head>
-				<title>{metaTitle}</title>
-				<meta
-					name="description"
-					content={meta.description || metaDescription}
-				/>
-				<meta name="keywords" content={meta.keywords} />
-				<meta property="og:title" content={metaTitle} />
-				<meta
-					property="og:description"
-					content={meta.description || metaDescription}
-				/>
-				<meta property="og:image" content={ogImage} />
-			</Head>
-
 			<Header />
 			<Menu />
 			<Main>{children}</Main>
