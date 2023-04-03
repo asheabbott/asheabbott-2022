@@ -12,11 +12,7 @@
 			margin: 5px;
 
 			@media #{$break-sm-up} {
-				width: calc(25% - 10px);
-			}
-
-			@media #{$break-lg-up} {
-				width: calc(12.5% - 10px);
+				width: calc(20% - 10px);
 			}
 
 			.projectInner {

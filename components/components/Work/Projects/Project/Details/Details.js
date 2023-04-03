@@ -2,6 +2,16 @@ import Button from "../../../../../lib/Button/Button";
 import styles from "./Details.module.scss";
 
 const Details = ({ project }) => {
+	const formattedDescription = () => {
+		const descriptionArray = project.description.split("[break]");
+
+		const formattedDescriptionArray = descriptionArray.map((paragraph) => (
+			<p key={paragraph}>{paragraph}</p>
+		));
+
+		return formattedDescriptionArray;
+	};
+
 	return (
 		<section className={styles.detailsSection}>
 			<div className="container">
@@ -12,7 +22,7 @@ const Details = ({ project }) => {
 								!project.buttons ? styles.noButtons : ""
 							}`}
 						>
-							{project.description}
+							{formattedDescription()}
 							{project.buttons && (
 								<div className={styles.buttons}>
 									{project.buttons.map((button) => {
