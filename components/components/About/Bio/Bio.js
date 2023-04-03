@@ -9,7 +9,7 @@ const Bio = () => {
 				<div className={`flex ${styles.flex}`}>
 					<div className={styles.headshot}>
 						<Image
-							src="/images/headshots/ashe-abbott.jpg"
+							src="/images/headshots/ashe-abbott.webp"
 							width={2208}
 							height={2208}
 							alt="Photo of Ashe Abbott DiBlasi"
