@@ -4,7 +4,7 @@ const awardsDB = [
 	{
 		id: "w3",
 		image: {
-			path: `${imgPath}/award-w3.png`,
+			path: `${imgPath}/award-w3.webp`,
 			width: 420,
 			height: 420,
 			alt: "W3 Awards logo",
@@ -13,7 +13,7 @@ const awardsDB = [
 	{
 		id: "aiga50",
 		image: {
-			path: `${imgPath}/award-aiga-50.png`,
+			path: `${imgPath}/award-aiga-50.webp`,
 			width: 420,
 			height: 367,
 			alt: "AIGA 50 Awards logo",
@@ -22,7 +22,7 @@ const awardsDB = [
 	{
 		id: "communicator",
 		image: {
-			path: `${imgPath}/award-communicator.png`,
+			path: `${imgPath}/award-communicator.webp`,
 			width: 308,
 			height: 324,
 			alt: "Communicator Awards logo",
@@ -31,7 +31,7 @@ const awardsDB = [
 	{
 		id: "addys",
 		image: {
-			path: `${imgPath}/award-addys.png`,
+			path: `${imgPath}/award-addys.webp`,
 			width: 420,
 			height: 264,
 			alt: "American Advertising Awards (Addys) logo",
@@ -40,7 +40,7 @@ const awardsDB = [
 	{
 		id: "excel",
 		image: {
-			path: `${imgPath}/award-excel.png`,
+			path: `${imgPath}/award-excel.webp`,
 			width: 420,
 			height: 214,
 			alt: "AM&P Excel Awards logo",
@@ -49,7 +49,7 @@ const awardsDB = [
 	{
 		id: "folio",
 		image: {
-			path: `${imgPath}/award-folio.png`,
+			path: `${imgPath}/award-folio.webp`,
 			width: 420,
 			height: 279,
 			alt: "Folio: Eddie and Ozzie Awards logo",
@@ -58,7 +58,7 @@ const awardsDB = [
 	{
 		id: "gdusa",
 		image: {
-			path: `${imgPath}/award-gdusa.png`,
+			path: `${imgPath}/award-gdusa.webp`,
 			width: 420,
 			height: 162,
 			alt: "Graphic Design USA (GDUSA) Awards logo",

@@ -33,16 +33,16 @@ const projectsDB = [
 			number: "OzgcdHncfkM",
 			color: "#330072",
 		},
-		thumbnail: `${imgPath}/all4ed/all4ed-thumbnail.jpg`,
+		thumbnail: `${imgPath}/all4ed/all4ed-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/all4ed/all4ed-mockup-1.jpg`,
+				path: `${imgPath}/all4ed/all4ed-mockup-1.webp`,
 				width: 2400,
 				height: 5096,
 				alt: "All4Ed website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/all4ed/all4ed-mockup-2.jpg`,
+				path: `${imgPath}/all4ed/all4ed-mockup-2.webp`,
 				width: 2400,
 				height: 5096,
 				alt: "Sample pages from the All4Ed website shown overlapping, in desktop view",
@@ -83,16 +83,16 @@ const projectsDB = [
 			number: "r2X9ONpdsDs",
 			color: "#52fe9e",
 		},
-		thumbnail: `${imgPath}/transurban/transurban-thumbnail.jpg`,
+		thumbnail: `${imgPath}/transurban/transurban-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/transurban/transurban-mockup-1.jpg`,
+				path: `${imgPath}/transurban/transurban-mockup-1.webp`,
 				width: 2400,
 				height: 3793,
 				alt: "Express Lanes website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/transurban/transurban-mockup-2.jpg`,
+				path: `${imgPath}/transurban/transurban-mockup-2.webp`,
 				width: 2400,
 				height: 3793,
 				alt: "Sample pages from the Express Lanes website shown overlapping, in desktop view",
@@ -129,16 +129,16 @@ const projectsDB = [
 			number: "WdNTsMtcNgc",
 			color: "#ea5a24",
 		},
-		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.jpg`,
+		thumbnail: `${imgPath}/carol-highsmith/carol-highsmith-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-1.jpg`,
+				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-1.webp`,
 				width: 2400,
 				height: 6868,
 				alt: "Carol Highsmith’s America website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-2.jpg`,
+				path: `${imgPath}/carol-highsmith/carol-highsmith-mockup-2.webp`,
 				width: 2400,
 				height: 6868,
 				alt: "Sample pages from the Carol Highsmith’s America website shown overlapping, in desktop view",
@@ -172,16 +172,16 @@ const projectsDB = [
 			number: "BK3Dw9ItWk4",
 			color: "#753BBD",
 		},
-		thumbnail: `${imgPath}/gfems/gfems-thumbnail.jpg`,
+		thumbnail: `${imgPath}/gfems/gfems-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/gfems/gfems-mockup-1.jpg`,
+				path: `${imgPath}/gfems/gfems-mockup-1.webp`,
 				width: 2400,
 				height: 5076,
 				alt: "Global Fund to End Modern Slavery website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/gfems/gfems-mockup-2.jpg`,
+				path: `${imgPath}/gfems/gfems-mockup-2.webp`,
 				width: 2400,
 				height: 5076,
 				alt: "Sample pages from the Global Fund to End Modern Slavery website shown overlapping, in desktop view",
@@ -220,16 +220,16 @@ const projectsDB = [
 		],
 		agency: beyondDefinition,
 		video: null,
-		thumbnail: `${imgPath}/afa/air-force-association-thumbnail.jpg`,
+		thumbnail: `${imgPath}/afa/air-force-association-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/afa/air-force-association-mockup-1.jpg`,
+				path: `${imgPath}/afa/air-force-association-mockup-1.webp`,
 				width: 2400,
 				height: 4201,
 				alt: "Air Force Association website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/afa/air-force-association-mockup-2.jpg`,
+				path: `${imgPath}/afa/air-force-association-mockup-2.webp`,
 				width: 2400,
 				height: 4201,
 				alt: "Sample pages from the Air Force Association website shown overlapping, in desktop view",
@@ -257,16 +257,16 @@ const projectsDB = [
 			number: "U_71M5bLhKU",
 			color: "#ff4646",
 		},
-		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.jpg`,
+		thumbnail: `${imgPath}/wfp/world-food-program-usa-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/wfp/world-food-program-usa-mockup-1.jpg`,
+				path: `${imgPath}/wfp/world-food-program-usa-mockup-1.webp`,
 				width: 2400,
 				height: 3624,
 				alt: "World Food Program USA website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/wfp/world-food-program-usa-mockup-2.jpg`,
+				path: `${imgPath}/wfp/world-food-program-usa-mockup-2.webp`,
 				width: 2400,
 				height: 3624,
 				alt: "Sample pages from the World Food Program USA website shown overlapping, in desktop view",
@@ -296,16 +296,16 @@ const projectsDB = [
 			number: "-ObWbgQTSmY",
 			color: "#009cde",
 		},
-		thumbnail: `${imgPath}/aria/aria-thumbnail.jpg`,
+		thumbnail: `${imgPath}/aria/aria-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/aria/aria-mockup-1.jpg`,
+				path: `${imgPath}/aria/aria-mockup-1.webp`,
 				width: 2400,
 				height: 3839,
 				alt: "American Risk and Insurance Association website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/aria/aria-mockup-2.jpg`,
+				path: `${imgPath}/aria/aria-mockup-2.webp`,
 				width: 2400,
 				height: 3839,
 				alt: "Sample pages from the American Risk and Insurance Association website shown overlapping, in desktop view",
@@ -345,16 +345,16 @@ const projectsDB = [
 			number: "SxbZiTAH9-o",
 			color: "#b5121b",
 		},
-		thumbnail: `${imgPath}/moaa/moaa-thumbnail.jpg`,
+		thumbnail: `${imgPath}/moaa/moaa-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/moaa/moaa-mockup-1.jpg`,
+				path: `${imgPath}/moaa/moaa-mockup-1.webp`,
 				width: 2400,
 				height: 3651,
 				alt: "Military Officers Association of America website homepage, in desktop and mobile views",
 			},
 			{
-				path: `${imgPath}/moaa/moaa-mockup-2.jpg`,
+				path: `${imgPath}/moaa/moaa-mockup-2.webp`,
 				width: 2400,
 				height: 3651,
 				alt: "Sample pages from the Military Officers Association of America website shown overlapping, in desktop view",
@@ -376,16 +376,16 @@ const projectsDB = [
 			number: "7pO60Y7Rvzs",
 			color: "#ffbd23",
 		},
-		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.jpg`,
+		thumbnail: `${imgPath}/unisys/unisys-linesight-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/unisys/unisys-linesight-mockup-1.jpg`,
+				path: `${imgPath}/unisys/unisys-linesight-mockup-1.webp`,
 				width: 2400,
 				height: 2092,
 				alt: "Unisys Linesight web experience homepage and first section screen",
 			},
 			{
-				path: `${imgPath}/unisys/unisys-linesight-mockup-2.jpg`,
+				path: `${imgPath}/unisys/unisys-linesight-mockup-2.webp`,
 				width: 2400,
 				height: 2092,
 				alt: "Unisys Linesight web experience second and third section screens",
@@ -414,16 +414,16 @@ const projectsDB = [
 			number: "MlG9kjSfT_I",
 			color: "#cad532",
 		},
-		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.jpg`,
+		thumbnail: `${imgPath}/bates-creative/bates-creative-thumbnail.webp`,
 		screenshots: [
 			{
-				path: `${imgPath}/bates-creative/bates-creative-mockup-1.jpg`,
+				path: `${imgPath}/bates-creative/bates-creative-mockup-1.webp`,
 				width: 2400,
 				height: 5964,
 				alt: "Bates Creative website homepage screens, in desktop view",
 			},
 			{
-				path: `${imgPath}/bates-creative/bates-creative-mockup-2.jpg`,
+				path: `${imgPath}/bates-creative/bates-creative-mockup-2.webp`,
 				width: 2400,
 				height: 5964,
 				alt: "Sample pages from the Bates Creative website shown overlapping, in desktop view",
