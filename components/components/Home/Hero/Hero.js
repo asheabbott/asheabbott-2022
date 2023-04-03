@@ -29,7 +29,7 @@ const Hero = () => {
 						<iframe
 							width="560"
 							height="315"
-							src="https://www.youtube.com/embed/0e_Oouy_wCE?autoplay=1&controls=0&loop=1&mute=1&playlist=0e_Oouy_wCE&rel=0"
+							src="https://www.youtube.com/embed/FUtofPX3Oq0?playlist=FUtofPX3Oq0&autoplay=1&controls=0&loop=1&mute=1&rel=0"
 							title="Work Samples"
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
