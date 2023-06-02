@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
-// import ReactGA from "react-ga4";
 import "focus-visible";
 
 import AppContext from "../components/components/App/AppContext";
@@ -152,20 +151,20 @@ const MyApp = ({ Component, pageProps }) => {
 				<meta property="og:description" content={pageMeta.description} />
 				<meta property="og:image" content={pageMeta.image} />
 			</Head>
-			{loading ? <Loader /> : <Component {...pageProps} />}
 			<Script
 				src="https://www.googletagmanager.com/gtag/js?id=G-1W8J7JFSZK"
 				strategy="afterInteractive"
 			/>
 			<Script id="google-analytics" strategy="afterInteractive">
 				{`
-					window.dataLayer = window.dataLayer || [];
+          window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
 
 					gtag('config', 'G-1W8J7JFSZK');
         `}
 			</Script>
+			{loading ? <Loader /> : <Component {...pageProps} />}
 		</AppContext.Provider>
 	);
 };
