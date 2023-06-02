@@ -19,9 +19,6 @@ import "../styles/reset.scss";
 import "../styles/typography.scss";
 import "../styles/video.scss";
 
-ReactGA.initialize("G-1W8J7JFSZK");
-// ReactGA.send("pageview");
-
 const MyApp = ({ Component, pageProps }) => {
 	const [loading, setLoading] = useState(true);
 	const [windowLoaded, setWindowLoaded] = useState(false);
@@ -38,6 +35,9 @@ const MyApp = ({ Component, pageProps }) => {
 	});
 
 	const router = useRouter();
+
+	ReactGA.initialize("G-1W8J7JFSZK");
+	// ReactGA.send("pageview");
 
 	// Loader logic
 	// Window load
