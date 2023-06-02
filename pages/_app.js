@@ -20,7 +20,7 @@ import "../styles/typography.scss";
 import "../styles/video.scss";
 
 ReactGA.initialize("G-1W8J7JFSZK");
-ReactGA.send("pageview");
+// ReactGA.send("pageview");
 
 const MyApp = ({ Component, pageProps }) => {
 	const [loading, setLoading] = useState(true);
